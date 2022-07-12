@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "cgu-nfe"
+version = "0.1.0"
+description = "Bot for crawl Electronic Invoices data from CGU"
+authors = ["FabioCaffarello <fabio.caffarello@gmail.com>"]
+maintainers = ["FabioCaffarello <fabio.caffarello@gmail.com>"]
+readme = "README.md"
+repository = "https://github.com/FLC-Data/cgu-nfe"
+
+  [tool.poetry.dependencies]
+  python = "^3.8"
+  requests = "^2.27.1"
+  jira = "^3.3.0"
+
+  [tool.poetry.dev-dependencies]
+  flake8 = "3.9.2"
+  pre-commit = "^2.17.0"
+  pyment = "^0.3.3"
+  python-dotenv = "^0.20.0"
+
+  [tool.poetry.scripts]
+  cli = "modules.cli.cli:cli"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
