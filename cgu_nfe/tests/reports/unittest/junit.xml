@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="2" time="0.605" timestamp="2022-07-15T20:51:00.870708" hostname="DESKTOP-8RMT7F3"><testcase classname="cgu_nfe.tests.bot.test_parser" name="test_shoul_parse_soup" time="0.041" /><testcase classname="cgu_nfe.tests.bot.test_parser" name="test_shoul_get_filter_id" time="0.042"><failure message="assert 2 == 3">def test_shoul_get_filter_id():
+        reference = reference_html("_on_processing_nfe_request.html")
+        filter_id = parser.get_filter_id(reference)
+        print(filter_id)
+&gt;       assert 2 == 3
+E       assert 2 == 3
+
+tests\bot\test_parser.py:21: AssertionError</failure></testcase></testsuite></testsuites>

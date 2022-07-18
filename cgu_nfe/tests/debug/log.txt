@@ -1,0 +1,254 @@
+INFO: Scrapy 2.6.1 started (bot: cgu_nfe)
+INFO: Versions: lxml 4.9.1.0, libxml2 2.9.12, cssselect 1.1.0, parsel 1.6.0, w3lib 1.22.0, Twisted 22.4.0, Python 3.8.12 (default, Oct 12 2021, 03:01:40) [MSC v.1916 64 bit (AMD64)], pyOpenSSL 22.0.0 (OpenSSL 3.0.5 5 Jul 2022), cryptography 37.0.4, Platform Windows-10-10.0.19043-SP0
+INFO: Overridden settings:
+{'BOT_NAME': 'cgu_nfe',
+ 'NEWSPIDER_MODULE': 'cgu_nfe.spiders',
+ 'ROBOTSTXT_OBEY': True,
+ 'SPIDER_MODULES': ['cgu_nfe.spiders']}
+DEBUG: Using reactor: twisted.internet.selectreactor.SelectReactor
+INFO: Telnet Password: fe9d67164625c1fe
+INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+INFO: Enabled item pipelines:
+['cgu_nfe.pipelines.CguNfePipeline']
+DEBUG: Using proactor: IocpProactor
+INFO: Spider opened
+INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+INFO: Telnet console listening on 127.0.0.1:6023
+DEBUG: Attempting to acquire lock 1784504627152 on C:\Users\fabio\.cache\python-tldextract\3.8.12.final__.venv__9b7fd5__tldextract-3.3.1\publicsuffix.org-tlds\de84b5ca2167d4c83e38fb162f2e8738.tldextract.json.lock
+DEBUG: Lock 1784504627152 acquired on C:\Users\fabio\.cache\python-tldextract\3.8.12.final__.venv__9b7fd5__tldextract-3.3.1\publicsuffix.org-tlds\de84b5ca2167d4c83e38fb162f2e8738.tldextract.json.lock
+DEBUG: Attempting to release lock 1784504627152 on C:\Users\fabio\.cache\python-tldextract\3.8.12.final__.venv__9b7fd5__tldextract-3.3.1\publicsuffix.org-tlds\de84b5ca2167d4c83e38fb162f2e8738.tldextract.json.lock
+DEBUG: Lock 1784504627152 released on C:\Users\fabio\.cache\python-tldextract\3.8.12.final__.venv__9b7fd5__tldextract-3.3.1\publicsuffix.org-tlds\de84b5ca2167d4c83e38fb162f2e8738.tldextract.json.lock
+DEBUG: Crawled (200) <GET https://portaltransparencia.gov.br/robots.txt> (referer: None)
+DEBUG: Crawled (200) <GET https://portaltransparencia.gov.br/notas-fiscais/consulta/resultado?paginacaoSimples=true&tamanhoPagina=2&offset=0&direcaoOrdenacao=asc&colunaOrdenacao=municipioFornecedor&de=15%2F06%2F2022&ate=17%2F06%2F2022&colunasSelecionadas=linkDetalhamento%2CorgaoSuperiorDestinatario%2CorgaoDestinatario%2CnomeFornecedor%2CcnpjFornecedor%2CmunicipioFornecedor%2CufFornecedor%2CchaveNotaFiscal%2CvalorNotaFiscal%2CdataEmissao%2CtipoEventoMaisRecente%2Cnumero%2Cserie&_=1657650093440> (referer: None) ['partial']
+DEBUG: Crawled (200) <GET https://portaltransparencia.gov.br/notas-fiscais/42220697541831000102550010000017291227782318?ordenarPor=dataEvento&direcao=asc> (referer: https://portaltransparencia.gov.br/notas-fiscais/consulta/resultado?paginacaoSimples=true&tamanhoPagina=2&offset=0&direcaoOrdenacao=asc&colunaOrdenacao=municipioFornecedor&de=15%2F06%2F2022&ate=17%2F06%2F2022&colunasSelecionadas=linkDetalhamento%2CorgaoSuperiorDestinatario%2CorgaoDestinatario%2CnomeFornecedor%2CcnpjFornecedor%2CmunicipioFornecedor%2CufFornecedor%2CchaveNotaFiscal%2CvalorNotaFiscal%2CdataEmissao%2CtipoEventoMaisRecente%2Cnumero%2Cserie&_=1657650093440)
+WARNING: C:\FLC-Data\cgu-nfe\cgu_nfe\cgu_nfe\spiders\parser.py:58: GuessedAtParserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("lxml"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+The code that caused this warning is on line 58 of the file C:\FLC-Data\cgu-nfe\cgu_nfe\cgu_nfe\spiders\parser.py. To get rid of this warning, pass the additional argument 'features="lxml"' to the BeautifulSoup constructor.
+
+  soup = BeautifulSoup(raw_data)
+
+DEBUG: Starting new HTTPS connection (1): portaltransparencia.gov.br:443
+DEBUG: https://portaltransparencia.gov.br:443 "GET /notas-fiscais/itens/resultado?paginacaoSimples=true&tamanhoPagina=15&offset=0&direcaoOrdenacao=asc&colunaOrdenacao=descricao&colunasSelecionadas=numero%2Cdescricao%2CcodigoNcmSh%2CncmSh%2Ccfop%2Cquantidade%2Cunidade%2CvalorUnitario%2Cvalor&idIdentificacao=125001408&_=1657924711124 HTTP/1.1" 200 575
+DEBUG: Starting new HTTPS connection (1): portaltransparencia.gov.br:443
+DEBUG: https://portaltransparencia.gov.br:443 "GET /notas-fiscais/eventos/resultado?paginacaoSimples=true&tamanhoPagina=15&offset=0&direcaoOrdenacao=asc&colunaOrdenacao=dataEvento&colunasSelecionadas=tipoEvento%2CdataEvento%2Cevento%2Cmotivo&idIdentificacao=125001408&_=1657935295275 HTTP/1.1" 200 None
+INFO: XPATH_JOIN: {'chaveDeAcesso': '42220697541831000102550010000017291227782318', 'valorTotalDaNotaFiscalR': '6.398,00', 'modelo': '55 - NF-E EMITIDA EM SUBSTITUIÇÃO AO MODELO 1 OU 1A', 'serie': '1', 'numero': '1729', 'dataDeEmissao': '17/06/2022 08:59:30', 'naturezaDaOperacao': 'VENDA', 'situacao': 'Autorização de Uso', 'dataDaUltimaModificacao': '17/06/2022 08:59:32', 'destinatario': {'cnpj': '09.570.063/0002-39', 'orgaoSuperior': 'Ministério da Defesa', 'orgaoEntidadeVinculada': 'Fundo do Exército', 'uf': 'AM', 'destinoDaOperacao': '2 - OPERAÇÃO INTERESTADUAL', 'consumidorFinal': '0 - NORMAL', 'presencaDoComprador': '1 - OPERAÇÃO PRESENCIAL', 'indicadorIe': 'CONTRIBUINTE ISENTO'}, 'emitente': {'cnpj': '97.541.831/0001-02', 'nomeRazaoSocial': 'GESSICA ZARZEKA OLIVO  GRM MAQUINAS E LOCACOES  ME', 'nomeFantasia': 'GESSICA ZARZEKA OLIVO  GRM MAQUINAS E LOCACOES  ME', 'inscricaoEstadual': '257153543', 'uf': 'SC'}, 'produtosServicos': [{'numero': '1', 'descricao': 'ROCADEIRA FS 290 STIHL', 'codigoNcmSh': '84678900', 'ncmSh': 'Outras ferramentas hidráulicas de motor não elétrico, de uso manual', 'cfop': '6102', 'quantidade': '1,00', 'unidade': 'UN', 'valorUnitario': '3.199,00', 'valor': '3.199,00'}, {'numero': '2', 'descricao': 'ROCADEIRA FS 290 STIHL', 'codigoNcmSh': '84678900', 'ncmSh': 'Outras ferramentas hidráulicas de motor não elétrico, de uso manual', 'cfop': '6102', 'quantidade': '1,00', 'unidade': 'UN', 'valorUnitario': '3.199,00', 'valor': '3.199,00'}], 'eventos': []}
+DEBUG: Record Saved!
+DEBUG: Scraped from <200 https://portaltransparencia.gov.br/notas-fiscais/42220697541831000102550010000017291227782318?ordenarPor=dataEvento&direcao=asc>
+{'chaveDeAcesso': '42220697541831000102550010000017291227782318',
+ 'dataDaUltimaModificacao': '17/06/2022 08:59:32',
+ 'dataDeEmissao': '17/06/2022 08:59:30',
+ 'destinatario': {'cnpj': '09.570.063/0002-39',
+                  'consumidorFinal': '0 - NORMAL',
+                  'destinoDaOperacao': '2 - OPERAÇÃO INTERESTADUAL',
+                  'indicadorIe': 'CONTRIBUINTE ISENTO',
+                  'orgaoEntidadeVinculada': 'Fundo do Exército',
+                  'orgaoSuperior': 'Ministério da Defesa',
+                  'presencaDoComprador': '1 - OPERAÇÃO PRESENCIAL',
+                  'uf': 'AM'},
+ 'emitente': {'cnpj': '97.541.831/0001-02',
+              'inscricaoEstadual': '257153543',
+              'nomeFantasia': 'GESSICA ZARZEKA OLIVO  GRM MAQUINAS E LOCACOES  '
+                              'ME',
+              'nomeRazaoSocial': 'GESSICA ZARZEKA OLIVO  GRM MAQUINAS E '
+                                 'LOCACOES  ME',
+              'uf': 'SC'},
+ 'event_timestamp': datetime.datetime(2022, 7, 16, 3, 41, 2, 511067),
+ 'modelo': '55 - NF-E EMITIDA EM SUBSTITUICAO AO MODELO 1 OU 1A',
+ 'naturezaDaOperacao': 'VENDA',
+ 'numero': '1729',
+ 'produtosServicos': {'cfop': '6102',
+                      'codigoNcmSh': '84678900',
+                      'descricao': 'ROCADEIRA FS 290 STIHL',
+                      'ncmSh': 'Outras ferramentas hidráulicas de motor não '
+                               'elétrico, de uso manual',
+                      'numero': '1',
+                      'quantidade': '1,00',
+                      'unidade': 'UN',
+                      'valor': '3.199,00',
+                      'valorUnitario': '3.199,00'},
+ 'serie': '1',
+ 'situacao': 'Autorização de Uso',
+ 'valorTotalDaNotaFiscalR': '6.398,00'}
+DEBUG: Crawled (200) <GET https://portaltransparencia.gov.br/notas-fiscais/15220605054903000179558900015481561647137137?ordenarPor=dataEvento&direcao=asc> (referer: https://portaltransparencia.gov.br/notas-fiscais/consulta/resultado?paginacaoSimples=true&tamanhoPagina=2&offset=0&direcaoOrdenacao=asc&colunaOrdenacao=municipioFornecedor&de=15%2F06%2F2022&ate=17%2F06%2F2022&colunasSelecionadas=linkDetalhamento%2CorgaoSuperiorDestinatario%2CorgaoDestinatario%2CnomeFornecedor%2CcnpjFornecedor%2CmunicipioFornecedor%2CufFornecedor%2CchaveNotaFiscal%2CvalorNotaFiscal%2CdataEmissao%2CtipoEventoMaisRecente%2Cnumero%2Cserie&_=1657650093440)
+DEBUG: Crawled (200) <GET https://portaltransparencia.gov.br/notas-fiscais/consulta/resultado?paginacaoSimples=true&tamanhoPagina=2&offset=1&direcaoOrdenacao=asc&colunaOrdenacao=municipioFornecedor&de=15%2F06%2F2022&ate=17%2F06%2F2022&colunasSelecionadas=linkDetalhamento%2CorgaoSuperiorDestinatario%2CorgaoDestinatario%2CnomeFornecedor%2CcnpjFornecedor%2CmunicipioFornecedor%2CufFornecedor%2CchaveNotaFiscal%2CvalorNotaFiscal%2CdataEmissao%2CtipoEventoMaisRecente%2Cnumero%2Cserie&_=1657650093440> (referer: https://portaltransparencia.gov.br/notas-fiscais/consulta/resultado?paginacaoSimples=true&tamanhoPagina=2&offset=0&direcaoOrdenacao=asc&colunaOrdenacao=municipioFornecedor&de=15%2F06%2F2022&ate=17%2F06%2F2022&colunasSelecionadas=linkDetalhamento%2CorgaoSuperiorDestinatario%2CorgaoDestinatario%2CnomeFornecedor%2CcnpjFornecedor%2CmunicipioFornecedor%2CufFornecedor%2CchaveNotaFiscal%2CvalorNotaFiscal%2CdataEmissao%2CtipoEventoMaisRecente%2Cnumero%2Cserie&_=1657650093440) ['partial']
+DEBUG: Starting new HTTPS connection (1): portaltransparencia.gov.br:443
+DEBUG: https://portaltransparencia.gov.br:443 "GET /notas-fiscais/itens/resultado?paginacaoSimples=true&tamanhoPagina=15&offset=0&direcaoOrdenacao=asc&colunaOrdenacao=descricao&colunasSelecionadas=numero%2Cdescricao%2CcodigoNcmSh%2CncmSh%2Ccfop%2Cquantidade%2Cunidade%2CvalorUnitario%2Cvalor&idIdentificacao=112201309&_=1657924711124 HTTP/1.1" 200 None
+DEBUG: Starting new HTTPS connection (1): portaltransparencia.gov.br:443
+DEBUG: https://portaltransparencia.gov.br:443 "GET /notas-fiscais/eventos/resultado?paginacaoSimples=true&tamanhoPagina=15&offset=0&direcaoOrdenacao=asc&colunaOrdenacao=dataEvento&colunasSelecionadas=tipoEvento%2CdataEvento%2Cevento%2Cmotivo&idIdentificacao=112201309&_=1657935295275 HTTP/1.1" 200 None
+INFO: XPATH_JOIN: {'chaveDeAcesso': '15220605054903000179558900015481561647137137', 'valorTotalDaNotaFiscalR': '2.612,50', 'modelo': '55 - NF-E EMITIDA EM SUBSTITUIÇÃO AO MODELO 1 OU 1A', 'serie': '890', 'numero': '1548156', 'dataDeEmissao': '15/06/2022 11:44:45', 'naturezaDaOperacao': 'S', 'situacao': 'Autorização de Uso', 'dataDaUltimaModificacao': '15/06/2022 11:51:14', 'destinatario': {'cnpj': '10.763.998/0009-97', 'orgaoSuperior': 'Ministério da Educação', 'orgaoEntidadeVinculada': 'Instituto Federal do Pará', 'uf': 'PA', 'destinoDaOperacao': '1 - OPERAÇÃO INTERNA', 'consumidorFinal': '1 - CONSUMIDOR FINAL', 'presencaDoComprador': '0 - NÃO SE APLICA', 'indicadorIe': 'NÃO CONTRIBUINTE'}, 'emitente': {'cpf': '***.845.652-**', 'nomeRazaoSocial': 'EDUARDO SOUZA DA SILVA', 'nomeFantasia': None, 'inscricaoEstadual': 'ISENTO', 'uf': 'PA'}, 'produtosServicos': [{'numero': '2', 'descricao': 'ABACAXI - ABACAXI', 'codigoNcmSh': '8043000', 'ncmSh': 'Abacaxis frescos ou secos', 'cfop': '5101', 'quantidade': '950,00', 'unidade': 'GRAMAS', 'valorUnitario': '1,07', 'valor': '1.016,50'}, {'numero': '1', 'descricao': 'LARANJA - LARANJA', 'codigoNcmSh': '8051000', 'ncmSh': 'Laranjas, frescas ou secas', 'cfop': '5101', 'quantidade': '1.350,00', 'unidade': 'GRAMAS', 'valorUnitario': '0,88', 'valor': '1.188,00'}, {'numero': '3', 'descricao': 'MACA', 'codigoNcmSh': '20089900', 'ncmSh': 'Outras frutas, partes de plantas, preparadas/conservadas de outro modo', 'cfop': '5101', 'quantidade': '400,00', 'unidade': 'GRAMAS', 'valorUnitario': '1,02', 'valor': '408,00'}], 'eventos': []}
+DEBUG: Record Saved!
+DEBUG: Scraped from <200 https://portaltransparencia.gov.br/notas-fiscais/15220605054903000179558900015481561647137137?ordenarPor=dataEvento&direcao=asc>
+{'chaveDeAcesso': '15220605054903000179558900015481561647137137',
+ 'dataDaUltimaModificacao': '15/06/2022 11:51:14',
+ 'dataDeEmissao': '15/06/2022 11:44:45',
+ 'destinatario': {'cnpj': '10.763.998/0009-97',
+                  'consumidorFinal': '1 - CONSUMIDOR FINAL',
+                  'destinoDaOperacao': '1 - OPERAÇÃO INTERNA',
+                  'indicadorIe': 'NÃO CONTRIBUINTE',
+                  'orgaoEntidadeVinculada': 'Instituto Federal do Pará',
+                  'orgaoSuperior': 'Ministério da Educação',
+                  'presencaDoComprador': '0 - NÃO SE APLICA',
+                  'uf': 'PA'},
+ 'emitente': {'cpf': '***.845.652-**',
+              'inscricaoEstadual': 'ISENTO',
+              'nomeFantasia': None,
+              'nomeRazaoSocial': 'EDUARDO SOUZA DA SILVA',
+              'uf': 'PA'},
+ 'event_timestamp': datetime.datetime(2022, 7, 16, 3, 41, 3, 347623),
+ 'modelo': '55 - NF-E EMITIDA EM SUBSTITUICAO AO MODELO 1 OU 1A',
+ 'naturezaDaOperacao': 'S',
+ 'numero': '1548156',
+ 'produtosServicos': {'cfop': '5101',
+                      'codigoNcmSh': '8043000',
+                      'descricao': 'ABACAXI - ABACAXI',
+                      'ncmSh': 'Abacaxis frescos ou secos',
+                      'numero': '2',
+                      'quantidade': '950,00',
+                      'unidade': 'GRAMAS',
+                      'valor': '1.016,50',
+                      'valorUnitario': '1,07'},
+ 'serie': '890',
+ 'situacao': 'Autorização de Uso',
+ 'valorTotalDaNotaFiscalR': '2.612,50'}
+DEBUG: Filtered duplicate request: <GET https://portaltransparencia.gov.br/notas-fiscais/42220697541831000102550010000017291227782318?ordenarPor=dataEvento&direcao=asc> - no more duplicates will be shown (see DUPEFILTER_DEBUG to show all duplicates)
+DEBUG: Crawled (200) <GET https://portaltransparencia.gov.br/notas-fiscais/consulta/resultado?paginacaoSimples=true&tamanhoPagina=2&offset=2&direcaoOrdenacao=asc&colunaOrdenacao=municipioFornecedor&de=15%2F06%2F2022&ate=17%2F06%2F2022&colunasSelecionadas=linkDetalhamento%2CorgaoSuperiorDestinatario%2CorgaoDestinatario%2CnomeFornecedor%2CcnpjFornecedor%2CmunicipioFornecedor%2CufFornecedor%2CchaveNotaFiscal%2CvalorNotaFiscal%2CdataEmissao%2CtipoEventoMaisRecente%2Cnumero%2Cserie&_=1657650093440> (referer: https://portaltransparencia.gov.br/notas-fiscais/consulta/resultado?paginacaoSimples=true&tamanhoPagina=2&offset=1&direcaoOrdenacao=asc&colunaOrdenacao=municipioFornecedor&de=15%2F06%2F2022&ate=17%2F06%2F2022&colunasSelecionadas=linkDetalhamento%2CorgaoSuperiorDestinatario%2CorgaoDestinatario%2CnomeFornecedor%2CcnpjFornecedor%2CmunicipioFornecedor%2CufFornecedor%2CchaveNotaFiscal%2CvalorNotaFiscal%2CdataEmissao%2CtipoEventoMaisRecente%2Cnumero%2Cserie&_=1657650093440)
+DEBUG: Crawled (200) <GET https://portaltransparencia.gov.br/notas-fiscais/42220697541831000102550010000017311161387058?ordenarPor=dataEvento&direcao=asc> (referer: https://portaltransparencia.gov.br/notas-fiscais/consulta/resultado?paginacaoSimples=true&tamanhoPagina=2&offset=1&direcaoOrdenacao=asc&colunaOrdenacao=municipioFornecedor&de=15%2F06%2F2022&ate=17%2F06%2F2022&colunasSelecionadas=linkDetalhamento%2CorgaoSuperiorDestinatario%2CorgaoDestinatario%2CnomeFornecedor%2CcnpjFornecedor%2CmunicipioFornecedor%2CufFornecedor%2CchaveNotaFiscal%2CvalorNotaFiscal%2CdataEmissao%2CtipoEventoMaisRecente%2Cnumero%2Cserie&_=1657650093440)
+DEBUG: Crawled (200) <GET https://portaltransparencia.gov.br/notas-fiscais/42220697541831000102550010000017301376254560?ordenarPor=dataEvento&direcao=asc> (referer: https://portaltransparencia.gov.br/notas-fiscais/consulta/resultado?paginacaoSimples=true&tamanhoPagina=2&offset=2&direcaoOrdenacao=asc&colunaOrdenacao=municipioFornecedor&de=15%2F06%2F2022&ate=17%2F06%2F2022&colunasSelecionadas=linkDetalhamento%2CorgaoSuperiorDestinatario%2CorgaoDestinatario%2CnomeFornecedor%2CcnpjFornecedor%2CmunicipioFornecedor%2CufFornecedor%2CchaveNotaFiscal%2CvalorNotaFiscal%2CdataEmissao%2CtipoEventoMaisRecente%2Cnumero%2Cserie&_=1657650093440)
+DEBUG: Starting new HTTPS connection (1): portaltransparencia.gov.br:443
+DEBUG: https://portaltransparencia.gov.br:443 "GET /notas-fiscais/itens/resultado?paginacaoSimples=true&tamanhoPagina=15&offset=0&direcaoOrdenacao=asc&colunaOrdenacao=descricao&colunasSelecionadas=numero%2Cdescricao%2CcodigoNcmSh%2CncmSh%2Ccfop%2Cquantidade%2Cunidade%2CvalorUnitario%2Cvalor&idIdentificacao=103201355&_=1657924711124 HTTP/1.1" 200 None
+DEBUG: Starting new HTTPS connection (1): portaltransparencia.gov.br:443
+DEBUG: https://portaltransparencia.gov.br:443 "GET /notas-fiscais/eventos/resultado?paginacaoSimples=true&tamanhoPagina=15&offset=0&direcaoOrdenacao=asc&colunaOrdenacao=dataEvento&colunasSelecionadas=tipoEvento%2CdataEvento%2Cevento%2Cmotivo&idIdentificacao=103201355&_=1657935295275 HTTP/1.1" 200 None
+INFO: XPATH_JOIN: {'chaveDeAcesso': '42220697541831000102550010000017311161387058', 'valorTotalDaNotaFiscalR': '1.502,33', 'modelo': '55 - NF-E EMITIDA EM SUBSTITUIÇÃO AO MODELO 1 OU 1A', 'serie': '1', 'numero': '1731', 'dataDeEmissao': '17/06/2022 09:02:31', 'naturezaDaOperacao': 'VENDA', 'situacao': 'Autorização de Uso', 'dataDaUltimaModificacao': '17/06/2022 09:02:33', 'destinatario': {'cnpj': '09.561.263/0001-44', 'orgaoSuperior': 'Ministério da Defesa', 'orgaoEntidadeVinculada': 'Comando do Exército', 'uf': 'AM', 'destinoDaOperacao': '2 - OPERAÇÃO INTERESTADUAL', 'consumidorFinal': '0 - NORMAL', 'presencaDoComprador': '1 - OPERAÇÃO PRESENCIAL', 'indicadorIe': 'NÃO CONTRIBUINTE'}, 'emitente': {'cnpj': '97.541.831/0001-02', 'nomeRazaoSocial': 'GESSICA ZARZEKA OLIVO  GRM MAQUINAS E LOCACOES  ME', 'nomeFantasia': 'GESSICA ZARZEKA OLIVO  GRM MAQUINAS E LOCACOES  ME', 'inscricaoEstadual': '257153543', 'uf': 'SC'}, 'produtosServicos': [{'numero': '1', 'descricao': 'RE 90.0 LAVADORA DE ALTA PRESSAO, 127 V', 'codigoNcmSh': '84243010', 'ncmSh': 'Máquinas e aparelhos de desobstrução de tubulação ou de limpeza, por jato de água', 'cfop': '6102', 'quantidade': '1,00', 'unidade': 'UN', 'valorUnitario': '1.502,33', 'valor': '1.502,33'}], 'eventos': []}
+DEBUG: Record Saved!
+DEBUG: Scraped from <200 https://portaltransparencia.gov.br/notas-fiscais/42220697541831000102550010000017311161387058?ordenarPor=dataEvento&direcao=asc>
+{'chaveDeAcesso': '42220697541831000102550010000017311161387058',
+ 'dataDaUltimaModificacao': '17/06/2022 09:02:33',
+ 'dataDeEmissao': '17/06/2022 09:02:31',
+ 'destinatario': {'cnpj': '09.561.263/0001-44',
+                  'consumidorFinal': '0 - NORMAL',
+                  'destinoDaOperacao': '2 - OPERAÇÃO INTERESTADUAL',
+                  'indicadorIe': 'NÃO CONTRIBUINTE',
+                  'orgaoEntidadeVinculada': 'Comando do Exército',
+                  'orgaoSuperior': 'Ministério da Defesa',
+                  'presencaDoComprador': '1 - OPERAÇÃO PRESENCIAL',
+                  'uf': 'AM'},
+ 'emitente': {'cnpj': '97.541.831/0001-02',
+              'inscricaoEstadual': '257153543',
+              'nomeFantasia': 'GESSICA ZARZEKA OLIVO  GRM MAQUINAS E LOCACOES  '
+                              'ME',
+              'nomeRazaoSocial': 'GESSICA ZARZEKA OLIVO  GRM MAQUINAS E '
+                                 'LOCACOES  ME',
+              'uf': 'SC'},
+ 'event_timestamp': datetime.datetime(2022, 7, 16, 3, 41, 4, 119219),
+ 'modelo': '55 - NF-E EMITIDA EM SUBSTITUICAO AO MODELO 1 OU 1A',
+ 'naturezaDaOperacao': 'VENDA',
+ 'numero': '1731',
+ 'produtosServicos': {'cfop': '6102',
+                      'codigoNcmSh': '84243010',
+                      'descricao': 'RE 90.0 LAVADORA DE ALTA PRESSAO, 127 V',
+                      'ncmSh': 'Máquinas e aparelhos de desobstrução de '
+                               'tubulação ou de limpeza, por jato de água',
+                      'numero': '1',
+                      'quantidade': '1,00',
+                      'unidade': 'UN',
+                      'valor': '1.502,33',
+                      'valorUnitario': '1.502,33'},
+ 'serie': '1',
+ 'situacao': 'Autorização de Uso',
+ 'valorTotalDaNotaFiscalR': '1.502,33'}
+DEBUG: Crawled (200) <GET https://portaltransparencia.gov.br/notas-fiscais/consulta/resultado?paginacaoSimples=true&tamanhoPagina=2&offset=3&direcaoOrdenacao=asc&colunaOrdenacao=municipioFornecedor&de=15%2F06%2F2022&ate=17%2F06%2F2022&colunasSelecionadas=linkDetalhamento%2CorgaoSuperiorDestinatario%2CorgaoDestinatario%2CnomeFornecedor%2CcnpjFornecedor%2CmunicipioFornecedor%2CufFornecedor%2CchaveNotaFiscal%2CvalorNotaFiscal%2CdataEmissao%2CtipoEventoMaisRecente%2Cnumero%2Cserie&_=1657650093440> (referer: https://portaltransparencia.gov.br/notas-fiscais/consulta/resultado?paginacaoSimples=true&tamanhoPagina=2&offset=2&direcaoOrdenacao=asc&colunaOrdenacao=municipioFornecedor&de=15%2F06%2F2022&ate=17%2F06%2F2022&colunasSelecionadas=linkDetalhamento%2CorgaoSuperiorDestinatario%2CorgaoDestinatario%2CnomeFornecedor%2CcnpjFornecedor%2CmunicipioFornecedor%2CufFornecedor%2CchaveNotaFiscal%2CvalorNotaFiscal%2CdataEmissao%2CtipoEventoMaisRecente%2Cnumero%2Cserie&_=1657650093440) ['partial']
+DEBUG: Starting new HTTPS connection (1): portaltransparencia.gov.br:443
+DEBUG: https://portaltransparencia.gov.br:443 "GET /notas-fiscais/itens/resultado?paginacaoSimples=true&tamanhoPagina=15&offset=0&direcaoOrdenacao=asc&colunaOrdenacao=descricao&colunasSelecionadas=numero%2Cdescricao%2CcodigoNcmSh%2CncmSh%2Ccfop%2Cquantidade%2Cunidade%2CvalorUnitario%2Cvalor&idIdentificacao=117201339&_=1657924711124 HTTP/1.1" 200 356
+DEBUG: Starting new HTTPS connection (1): portaltransparencia.gov.br:443
+DEBUG: https://portaltransparencia.gov.br:443 "GET /notas-fiscais/eventos/resultado?paginacaoSimples=true&tamanhoPagina=15&offset=0&direcaoOrdenacao=asc&colunaOrdenacao=dataEvento&colunasSelecionadas=tipoEvento%2CdataEvento%2Cevento%2Cmotivo&idIdentificacao=117201339&_=1657935295275 HTTP/1.1" 200 None
+INFO: XPATH_JOIN: {'chaveDeAcesso': '42220697541831000102550010000017301376254560', 'valorTotalDaNotaFiscalR': '1.502,33', 'modelo': '55 - NF-E EMITIDA EM SUBSTITUIÇÃO AO MODELO 1 OU 1A', 'serie': '1', 'numero': '1730', 'dataDeEmissao': '17/06/2022 09:01:07', 'naturezaDaOperacao': 'VENDA', 'situacao': 'Autorização de Uso', 'dataDaUltimaModificacao': '17/06/2022 09:01:09', 'destinatario': {'cnpj': '09.561.263/0001-44', 'orgaoSuperior': 'Ministério da Defesa', 'orgaoEntidadeVinculada': 'Comando do Exército', 'uf': 'AM', 'destinoDaOperacao': '2 - OPERAÇÃO INTERESTADUAL', 'consumidorFinal': '0 - NORMAL', 'presencaDoComprador': '1 - OPERAÇÃO PRESENCIAL', 'indicadorIe': 'NÃO CONTRIBUINTE'}, 'emitente': {'cnpj': '97.541.831/0001-02', 'nomeRazaoSocial': 'GESSICA ZARZEKA OLIVO  GRM MAQUINAS E LOCACOES  ME', 'nomeFantasia': 'GESSICA ZARZEKA OLIVO  GRM MAQUINAS E LOCACOES  ME', 'inscricaoEstadual': '257153543', 'uf': 'SC'}, 'produtosServicos': [{'numero': '1', 'descricao': 'RE 90.0 LAVADORA DE ALTA PRESSAO, 127 V', 'codigoNcmSh': '84243010', 'ncmSh': 'Máquinas e aparelhos de desobstrução de tubulação ou de limpeza, por jato de água', 'cfop': '6102', 'quantidade': '1,00', 'unidade': 'UN', 'valorUnitario': '1.502,33', 'valor': '1.502,33'}], 'eventos': []}
+DEBUG: Record Saved!
+DEBUG: Scraped from <200 https://portaltransparencia.gov.br/notas-fiscais/42220697541831000102550010000017301376254560?ordenarPor=dataEvento&direcao=asc>
+{'chaveDeAcesso': '42220697541831000102550010000017301376254560',
+ 'dataDaUltimaModificacao': '17/06/2022 09:01:09',
+ 'dataDeEmissao': '17/06/2022 09:01:07',
+ 'destinatario': {'cnpj': '09.561.263/0001-44',
+                  'consumidorFinal': '0 - NORMAL',
+                  'destinoDaOperacao': '2 - OPERAÇÃO INTERESTADUAL',
+                  'indicadorIe': 'NÃO CONTRIBUINTE',
+                  'orgaoEntidadeVinculada': 'Comando do Exército',
+                  'orgaoSuperior': 'Ministério da Defesa',
+                  'presencaDoComprador': '1 - OPERAÇÃO PRESENCIAL',
+                  'uf': 'AM'},
+ 'emitente': {'cnpj': '97.541.831/0001-02',
+              'inscricaoEstadual': '257153543',
+              'nomeFantasia': 'GESSICA ZARZEKA OLIVO  GRM MAQUINAS E LOCACOES  '
+                              'ME',
+              'nomeRazaoSocial': 'GESSICA ZARZEKA OLIVO  GRM MAQUINAS E '
+                                 'LOCACOES  ME',
+              'uf': 'SC'},
+ 'event_timestamp': datetime.datetime(2022, 7, 16, 3, 41, 4, 414362),
+ 'modelo': '55 - NF-E EMITIDA EM SUBSTITUICAO AO MODELO 1 OU 1A',
+ 'naturezaDaOperacao': 'VENDA',
+ 'numero': '1730',
+ 'produtosServicos': {'cfop': '6102',
+                      'codigoNcmSh': '84243010',
+                      'descricao': 'RE 90.0 LAVADORA DE ALTA PRESSAO, 127 V',
+                      'ncmSh': 'Máquinas e aparelhos de desobstrução de '
+                               'tubulação ou de limpeza, por jato de água',
+                      'numero': '1',
+                      'quantidade': '1,00',
+                      'unidade': 'UN',
+                      'valor': '1.502,33',
+                      'valorUnitario': '1.502,33'},
+ 'serie': '1',
+ 'situacao': 'Autorização de Uso',
+ 'valorTotalDaNotaFiscalR': '1.502,33'}
+INFO: NO MORE PAGES
+INFO: Queue End's....
+INFO: Closing spider (finished)
+INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 8654,
+ 'downloader/request_count': 9,
+ 'downloader/request_method_count/GET': 9,
+ 'downloader/response_bytes': 60137,
+ 'downloader/response_count': 9,
+ 'downloader/response_status_count/200': 9,
+ 'dupefilter/filtered': 2,
+ 'elapsed_time_seconds': 3.561968,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2022, 7, 16, 6, 41, 4, 426352),
+ 'httpcompression/response_bytes': 188913,
+ 'httpcompression/response_count': 5,
+ 'item_scraped_count': 4,
+ 'log_count/DEBUG': 40,
+ 'log_count/INFO': 16,
+ 'log_count/WARNING': 1,
+ 'request_depth_max': 3,
+ 'response_received_count': 9,
+ 'robotstxt/request_count': 1,
+ 'robotstxt/response_count': 1,
+ 'robotstxt/response_status_count/200': 1,
+ 'scheduler/dequeued': 8,
+ 'scheduler/dequeued/memory': 8,
+ 'scheduler/enqueued': 8,
+ 'scheduler/enqueued/memory': 8,
+ 'start_time': datetime.datetime(2022, 7, 16, 6, 41, 0, 864384)}
+INFO: Spider closed (finished)

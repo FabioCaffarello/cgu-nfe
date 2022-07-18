@@ -1,3 +1,16 @@
+[tool.coverage.run]
+branch = true
+source = [ "cgu_nfe" ]
+omit = [ ]
+
+[tool.coverage.report]
+exclude_lines = [ ]
+show_missing = true
+
+[tool.pytest.ini_options]
+addopts = "--cov --cov-report html:'tests/reports/cov/html' --cov-report xml:'tests/reports/cov/coverage.xml' --junitxml='tests/reports/unittest/junit.xml' --html='tests/reports/unittest/html/index.html'"
+
+
 [tool.poetry]
 name = "cgu-nfe"
 version = "0.1.0"
@@ -11,15 +24,25 @@ repository = "https://github.com/FLC-Data/cgu-nfe"
   python = "^3.8"
   requests = "^2.27.1"
   jira = "^3.3.0"
+  Scrapy = "^2.6.1"
+  beautifulsoup4 = "^4.11.1"
+  pymongo = "^4.1.1"
+  redis = "^4.3.4"
 
   [tool.poetry.dev-dependencies]
   flake8 = "3.9.2"
   pre-commit = "^2.17.0"
   pyment = "^0.3.3"
   python-dotenv = "^0.20.0"
+  pytest = "6.2.4"
+  pytest-cov = "2.11.1"
+  pytest-html = "3.1.1"
+  pytest-sugar = "0.9.4"
+  tomli = "1.2.2"
 
   [tool.poetry.scripts]
   cli = "modules.cli.cli:cli"
+  teste = "modules.proxy.proxy:test_run"
 
 [build-system]
 requires = ["poetry-core"]
