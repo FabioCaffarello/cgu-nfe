@@ -1,6 +1,7 @@
 ### Generate with: https://www.toptal.com/developers/gitignore
 
 data/
+reports/
 
 ### Python ###
 # Byte-compiled / optimized / DLL files

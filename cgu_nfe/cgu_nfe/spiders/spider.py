@@ -47,8 +47,8 @@ class CguNfeSpider(scrapy.Spider):
         self.debug_response("parse.json", json.dumps(_response, indent=4).encode("utf-8"))
         array_data = _response.get('data', None)
 
-        if array_data is None or array_data == []:
-            _has_next = False
+        # if array_data is None or array_data == []:
+        #     _has_next = False
 
         if self._offset < 3:  # _has_next:
             self._offset += 1
