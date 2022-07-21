@@ -15,9 +15,9 @@ COPY ./cgu_nfe/scrapy.cfg .
 COPY ./.env .
 COPY ./pyproject.toml .
 COPY ./poetry.toml .
-COPY ./cgu_nfe/tests ./tests
+COPY ./cgu_nfe/cgu_nfe/spiders/tests ./cgu_nfe/spiders/tests
 COPY ./cgu_nfe/schemas ./schemas
-RUN poetry install --without dev
+RUN poetry install
 
 EXPOSE 8888
 

@@ -97,39 +97,49 @@ class CguNfeSpider(scrapy.Spider):
         yield items.load_item()
 
     def _request_products_services(self, filter_id):
-        r = (
-            requests
-            .get(
-                self.url_request.generate_url_products_services_request(filter_id),
-                proxies={
-                    "http": self._proxy,
-                    "https": self._proxy
-                },
-                timeout=5
+        try:
+            r = (
+                requests
+                .get(
+                    self.url_request.generate_url_products_services_request(filter_id),
+                    proxies={
+                        "http": self._proxy,
+                        "https": self._proxy
+                    },
+                    timeout=5
+                )
             )
-        )
-        self.products_services_data = r.json().get('data', None)
+            self.products_services_data = r.json().get('data', None)
+        except:
+            pass
 
     def _request_events(self, filter_id):
-        r = (
-            requests
-            .get(
-                self.url_request.generate_url_events_request(filter_id),
-                proxies={
-                    "http": self._proxy,
-                    "https": self._proxy
-                },
-                timeout=5
+        try:
+            r = (
+                requests
+                .get(
+                    self.url_request.generate_url_events_request(filter_id),
+                    proxies={
+                        "http": self._proxy,
+                        "https": self._proxy
+                    },
+                    timeout=5
+                )
             )
-        )
-        self.events_data = r.json().get('data', None)
-
-        raise errors.GatewayTimeoutError()
+            self.events_data = r.json().get('data', None)
+        except:
+            pass
 
     def debug_response(self, file_name, content):
-        _path_debug = f"{static.PATH_DEBUG}{file_name}"
-        if os.path.dirname(__file__) != "/home/bot/cgu_nfe/spider":
-            with open(_path_debug, "wb") as file:
+        _path_debug = os.path.realpath(
+            os.path.join(
+                os.path.dirname(__file__),
+                static.PATH_DEBUG,
+                file_name
+            )
+        )
+
+        with open(_path_debug, "wb") as file:
                 file.write(content)
 
     def _on_error(self, failure):
@@ -139,4 +149,8 @@ class CguNfeSpider(scrapy.Spider):
         if self._current_errors_attemps <= static.MAX_PROXY_ATTEMPTS:
             self.logger.warning("Trying Again")
             self._current_errors_attemps += 1
+            if not self._queue.empty():
+                self._queue.get_nowait()
             return self._first_request()
+
+        raise errors.GatewayTimeoutError()

@@ -46,6 +46,10 @@ services:
     links:
       - mongodb
       - redis
+    volumes:
+    - ./cgu_nfe/cgu_nfe/spiders/tests/debug:/home/bot/cgu_nfe/spiders/tests/debug
+    - ./cgu_nfe/cgu_nfe/spiders/tests/response_files:/home/bot/cgu_nfe/spiders/tests/response_files
+    - ./cgu_nfe/cgu_nfe/spiders/tests/reports:/home/bot/cgu_nfe/spiders/tests/reports
 
     networks:
       - dataplatform-network

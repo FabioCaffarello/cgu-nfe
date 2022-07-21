@@ -7,7 +7,7 @@ class LoggingConfig:
     def __init__(self):
         configure_logging(install_root_handler=False)
         logging.basicConfig(
-            filename='tests/debug/log.txt',
+            filename='cgu_nfe/spiders/tests/debug/log.txt',
             filemode='w',
             format='%(levelname)s: %(message)s',
             level=logging.INFO
