@@ -6,3 +6,6 @@ lint:
 
 check-integration:
 	docker-compose up --build
+
+check:
+	poetry run pytest
