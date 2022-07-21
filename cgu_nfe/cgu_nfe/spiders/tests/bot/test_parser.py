@@ -1,4 +1,4 @@
-from ...cgu_nfe.spiders import parser
+from ... import parser
 
 
 def reference_html(file_name):
