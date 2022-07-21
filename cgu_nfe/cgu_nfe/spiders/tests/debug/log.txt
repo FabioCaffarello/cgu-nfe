@@ -1,15 +1,16 @@
 INFO: Scrapy 2.6.1 started (bot: cgu_nfe)
-INFO: Versions: lxml 4.9.1.0, libxml2 2.9.12, cssselect 1.1.0, parsel 1.6.0, w3lib 1.22.0, Twisted 22.4.0, Python 3.8.12 (default, Oct 12 2021, 03:01:40) [MSC v.1916 64 bit (AMD64)], pyOpenSSL 22.0.0 (OpenSSL 3.0.5 5 Jul 2022), cryptography 37.0.4, Platform Windows-10-10.0.19043-SP0
+INFO: Versions: lxml 4.9.1.0, libxml2 2.9.14, cssselect 1.1.0, parsel 1.6.0, w3lib 1.22.0, Twisted 22.4.0, Python 3.8.13 (default, Jul 12 2022, 12:32:46) - [GCC 10.2.1 20210110], pyOpenSSL 22.0.0 (OpenSSL 3.0.5 5 Jul 2022), cryptography 37.0.4, Platform Linux-4.19.128-microsoft-standard-x86_64-with-glibc2.2.5
 INFO: Overridden settings:
 {'BOT_NAME': 'cgu_nfe',
  'NEWSPIDER_MODULE': 'cgu_nfe.spiders',
  'ROBOTSTXT_OBEY': True,
  'SPIDER_MODULES': ['cgu_nfe.spiders']}
-DEBUG: Using reactor: twisted.internet.selectreactor.SelectReactor
-INFO: Telnet Password: f437774f1a3b70df
+DEBUG: Using reactor: twisted.internet.epollreactor.EPollReactor
+INFO: Telnet Password: b9ea4d0229f99569
 INFO: Enabled extensions:
 ['scrapy.extensions.corestats.CoreStats',
  'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
  'scrapy.extensions.logstats.LogStats']
 INFO: Enabled downloader middlewares:
 ['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
@@ -31,50 +32,105 @@ INFO: Enabled spider middlewares:
  'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
  'scrapy.spidermiddlewares.depth.DepthMiddleware']
 INFO: Enabled item pipelines:
-['cgu_nfe.pipelines.CguNfePipeline']
-DEBUG: Using proactor: IocpProactor
+['cgu_nfe.pipelines.CguNfeMetadataPipeline', 'cgu_nfe.pipelines.CguNfePipeline']
+DEBUG: Using selector: EpollSelector
 INFO: Spider opened
+DEBUG: Metadata Saved!
 INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
 INFO: Telnet console listening on 127.0.0.1:6023
-DEBUG: Attempting to acquire lock 2004050860352 on C:\Users\fabio\.cache\python-tldextract\3.8.12.final__.venv__9b7fd5__tldextract-3.3.1\publicsuffix.org-tlds\de84b5ca2167d4c83e38fb162f2e8738.tldextract.json.lock
-DEBUG: Lock 2004050860352 acquired on C:\Users\fabio\.cache\python-tldextract\3.8.12.final__.venv__9b7fd5__tldextract-3.3.1\publicsuffix.org-tlds\de84b5ca2167d4c83e38fb162f2e8738.tldextract.json.lock
-DEBUG: Attempting to release lock 2004050860352 on C:\Users\fabio\.cache\python-tldextract\3.8.12.final__.venv__9b7fd5__tldextract-3.3.1\publicsuffix.org-tlds\de84b5ca2167d4c83e38fb162f2e8738.tldextract.json.lock
-DEBUG: Lock 2004050860352 released on C:\Users\fabio\.cache\python-tldextract\3.8.12.final__.venv__9b7fd5__tldextract-3.3.1\publicsuffix.org-tlds\de84b5ca2167d4c83e38fb162f2e8738.tldextract.json.lock
+DEBUG: Attempting to acquire lock 140595845110656 on /root/.cache/python-tldextract/3.8.13.final__.venv__e74e96__tldextract-3.3.1/publicsuffix.org-tlds/de84b5ca2167d4c83e38fb162f2e8738.tldextract.json.lock
+DEBUG: Lock 140595845110656 acquired on /root/.cache/python-tldextract/3.8.13.final__.venv__e74e96__tldextract-3.3.1/publicsuffix.org-tlds/de84b5ca2167d4c83e38fb162f2e8738.tldextract.json.lock
+DEBUG: Attempting to acquire lock 140595827926016 on /root/.cache/python-tldextract/3.8.13.final__.venv__e74e96__tldextract-3.3.1/urls/62bf135d1c2f3d4db4228b9ecaf507a2.tldextract.json.lock
+DEBUG: Lock 140595827926016 acquired on /root/.cache/python-tldextract/3.8.13.final__.venv__e74e96__tldextract-3.3.1/urls/62bf135d1c2f3d4db4228b9ecaf507a2.tldextract.json.lock
+DEBUG: Starting new HTTPS connection (1): publicsuffix.org:443
+DEBUG: https://publicsuffix.org:443 "GET /list/public_suffix_list.dat HTTP/1.1" 200 None
+DEBUG: Attempting to release lock 140595827926016 on /root/.cache/python-tldextract/3.8.13.final__.venv__e74e96__tldextract-3.3.1/urls/62bf135d1c2f3d4db4228b9ecaf507a2.tldextract.json.lock
+DEBUG: Lock 140595827926016 released on /root/.cache/python-tldextract/3.8.13.final__.venv__e74e96__tldextract-3.3.1/urls/62bf135d1c2f3d4db4228b9ecaf507a2.tldextract.json.lock
+DEBUG: Attempting to release lock 140595845110656 on /root/.cache/python-tldextract/3.8.13.final__.venv__e74e96__tldextract-3.3.1/publicsuffix.org-tlds/de84b5ca2167d4c83e38fb162f2e8738.tldextract.json.lock
+DEBUG: Lock 140595845110656 released on /root/.cache/python-tldextract/3.8.13.final__.venv__e74e96__tldextract-3.3.1/publicsuffix.org-tlds/de84b5ca2167d4c83e38fb162f2e8738.tldextract.json.lock
 DEBUG: Crawled (200) <GET https://portaltransparencia.gov.br/robots.txt> (referer: None)
-DEBUG: Crawled (200) <GET https://portaltransparencia.gov.br/notas-fiscais/consulta/resultado?paginacaoSimples=true&tamanhoPagina=2&offset=0&direcaoOrdenacao=asc&colunaOrdenacao=municipioFornecedor&de=18%2F06%2F2022&ate=20%2F06%2F2022&colunasSelecionadas=linkDetalhamento%2CorgaoSuperiorDestinatario%2CorgaoDestinatario%2CnomeFornecedor%2CcnpjFornecedor%2CmunicipioFornecedor%2CufFornecedor%2CchaveNotaFiscal%2CvalorNotaFiscal%2CdataEmissao%2CtipoEventoMaisRecente%2Cnumero%2Cserie&_=1657650093440> (referer: None) ['partial']
-DEBUG: Crawled (200) <GET https://portaltransparencia.gov.br/notas-fiscais/consulta/resultado?paginacaoSimples=true&tamanhoPagina=2&offset=1&direcaoOrdenacao=asc&colunaOrdenacao=municipioFornecedor&de=18%2F06%2F2022&ate=20%2F06%2F2022&colunasSelecionadas=linkDetalhamento%2CorgaoSuperiorDestinatario%2CorgaoDestinatario%2CnomeFornecedor%2CcnpjFornecedor%2CmunicipioFornecedor%2CufFornecedor%2CchaveNotaFiscal%2CvalorNotaFiscal%2CdataEmissao%2CtipoEventoMaisRecente%2Cnumero%2Cserie&_=1657650093440> (referer: https://portaltransparencia.gov.br/notas-fiscais/consulta/resultado?paginacaoSimples=true&tamanhoPagina=2&offset=0&direcaoOrdenacao=asc&colunaOrdenacao=municipioFornecedor&de=18%2F06%2F2022&ate=20%2F06%2F2022&colunasSelecionadas=linkDetalhamento%2CorgaoSuperiorDestinatario%2CorgaoDestinatario%2CnomeFornecedor%2CcnpjFornecedor%2CmunicipioFornecedor%2CufFornecedor%2CchaveNotaFiscal%2CvalorNotaFiscal%2CdataEmissao%2CtipoEventoMaisRecente%2Cnumero%2Cserie&_=1657650093440) ['partial']
+DEBUG: Crawled (200) <GET https://portaltransparencia.gov.br/notas-fiscais/consulta/resultado?paginacaoSimples=true&tamanhoPagina=2&offset=0&direcaoOrdenacao=asc&colunaOrdenacao=municipioFornecedor&de=20%2F06%2F2022&ate=22%2F06%2F2022&colunasSelecionadas=linkDetalhamento%2CorgaoSuperiorDestinatario%2CorgaoDestinatario%2CnomeFornecedor%2CcnpjFornecedor%2CmunicipioFornecedor%2CufFornecedor%2CchaveNotaFiscal%2CvalorNotaFiscal%2CdataEmissao%2CtipoEventoMaisRecente%2Cnumero%2Cserie&_=1657650093440> (referer: None)
+DEBUG: Crawled (200) <GET https://portaltransparencia.gov.br/notas-fiscais/consulta/resultado?paginacaoSimples=true&tamanhoPagina=2&offset=1&direcaoOrdenacao=asc&colunaOrdenacao=municipioFornecedor&de=20%2F06%2F2022&ate=22%2F06%2F2022&colunasSelecionadas=linkDetalhamento%2CorgaoSuperiorDestinatario%2CorgaoDestinatario%2CnomeFornecedor%2CcnpjFornecedor%2CmunicipioFornecedor%2CufFornecedor%2CchaveNotaFiscal%2CvalorNotaFiscal%2CdataEmissao%2CtipoEventoMaisRecente%2Cnumero%2Cserie&_=1657650093440> (referer: https://portaltransparencia.gov.br/notas-fiscais/consulta/resultado?paginacaoSimples=true&tamanhoPagina=2&offset=0&direcaoOrdenacao=asc&colunaOrdenacao=municipioFornecedor&de=20%2F06%2F2022&ate=22%2F06%2F2022&colunasSelecionadas=linkDetalhamento%2CorgaoSuperiorDestinatario%2CorgaoDestinatario%2CnomeFornecedor%2CcnpjFornecedor%2CmunicipioFornecedor%2CufFornecedor%2CchaveNotaFiscal%2CvalorNotaFiscal%2CdataEmissao%2CtipoEventoMaisRecente%2Cnumero%2Cserie&_=1657650093440)
 DEBUG: Filtered duplicate request: <GET https://portaltransparencia.gov.br/notas-fiscais/52220619367660000133550010000116791166304992?ordenarPor=dataEvento&direcao=asc> - no more duplicates will be shown (see DUPEFILTER_DEBUG to show all duplicates)
-DEBUG: Crawled (200) <GET https://portaltransparencia.gov.br/notas-fiscais/12220606255086000180550010000089221040371116?ordenarPor=dataEvento&direcao=asc> (referer: https://portaltransparencia.gov.br/notas-fiscais/consulta/resultado?paginacaoSimples=true&tamanhoPagina=2&offset=0&direcaoOrdenacao=asc&colunaOrdenacao=municipioFornecedor&de=18%2F06%2F2022&ate=20%2F06%2F2022&colunasSelecionadas=linkDetalhamento%2CorgaoSuperiorDestinatario%2CorgaoDestinatario%2CnomeFornecedor%2CcnpjFornecedor%2CmunicipioFornecedor%2CufFornecedor%2CchaveNotaFiscal%2CvalorNotaFiscal%2CdataEmissao%2CtipoEventoMaisRecente%2Cnumero%2Cserie&_=1657650093440)
-DEBUG: Crawled (200) <GET https://portaltransparencia.gov.br/notas-fiscais/52220619367660000133550010000116791166304992?ordenarPor=dataEvento&direcao=asc> (referer: https://portaltransparencia.gov.br/notas-fiscais/consulta/resultado?paginacaoSimples=true&tamanhoPagina=2&offset=0&direcaoOrdenacao=asc&colunaOrdenacao=municipioFornecedor&de=18%2F06%2F2022&ate=20%2F06%2F2022&colunasSelecionadas=linkDetalhamento%2CorgaoSuperiorDestinatario%2CorgaoDestinatario%2CnomeFornecedor%2CcnpjFornecedor%2CmunicipioFornecedor%2CufFornecedor%2CchaveNotaFiscal%2CvalorNotaFiscal%2CdataEmissao%2CtipoEventoMaisRecente%2Cnumero%2Cserie&_=1657650093440)
-WARNING: C:\FLC-Data\cgu-nfe\cgu_nfe\cgu_nfe\spiders\parser.py:58: GuessedAtParserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("lxml"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+DEBUG: Crawled (200) <GET https://portaltransparencia.gov.br/notas-fiscais/52220619367660000133550010000116791166304992?ordenarPor=dataEvento&direcao=asc> (referer: https://portaltransparencia.gov.br/notas-fiscais/consulta/resultado?paginacaoSimples=true&tamanhoPagina=2&offset=0&direcaoOrdenacao=asc&colunaOrdenacao=municipioFornecedor&de=20%2F06%2F2022&ate=22%2F06%2F2022&colunasSelecionadas=linkDetalhamento%2CorgaoSuperiorDestinatario%2CorgaoDestinatario%2CnomeFornecedor%2CcnpjFornecedor%2CmunicipioFornecedor%2CufFornecedor%2CchaveNotaFiscal%2CvalorNotaFiscal%2CdataEmissao%2CtipoEventoMaisRecente%2Cnumero%2Cserie&_=1657650093440)
+DEBUG: Crawled (200) <GET https://portaltransparencia.gov.br/notas-fiscais/consulta/resultado?paginacaoSimples=true&tamanhoPagina=2&offset=2&direcaoOrdenacao=asc&colunaOrdenacao=municipioFornecedor&de=20%2F06%2F2022&ate=22%2F06%2F2022&colunasSelecionadas=linkDetalhamento%2CorgaoSuperiorDestinatario%2CorgaoDestinatario%2CnomeFornecedor%2CcnpjFornecedor%2CmunicipioFornecedor%2CufFornecedor%2CchaveNotaFiscal%2CvalorNotaFiscal%2CdataEmissao%2CtipoEventoMaisRecente%2Cnumero%2Cserie&_=1657650093440> (referer: https://portaltransparencia.gov.br/notas-fiscais/consulta/resultado?paginacaoSimples=true&tamanhoPagina=2&offset=1&direcaoOrdenacao=asc&colunaOrdenacao=municipioFornecedor&de=20%2F06%2F2022&ate=22%2F06%2F2022&colunasSelecionadas=linkDetalhamento%2CorgaoSuperiorDestinatario%2CorgaoDestinatario%2CnomeFornecedor%2CcnpjFornecedor%2CmunicipioFornecedor%2CufFornecedor%2CchaveNotaFiscal%2CvalorNotaFiscal%2CdataEmissao%2CtipoEventoMaisRecente%2Cnumero%2Cserie&_=1657650093440)
+WARNING: /home/bot/cgu_nfe/spiders/parser.py:56: GuessedAtParserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("lxml"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
 
-The code that caused this warning is on line 58 of the file C:\FLC-Data\cgu-nfe\cgu_nfe\cgu_nfe\spiders\parser.py. To get rid of this warning, pass the additional argument 'features="lxml"' to the BeautifulSoup constructor.
+The code that caused this warning is on line 56 of the file /home/bot/cgu_nfe/spiders/parser.py. To get rid of this warning, pass the additional argument 'features="lxml"' to the BeautifulSoup constructor.
 
   soup = BeautifulSoup(raw_data)
 
 DEBUG: Starting new HTTPS connection (1): portaltransparencia.gov.br:443
-DEBUG: https://portaltransparencia.gov.br:443 "GET /notas-fiscais/itens/resultado?paginacaoSimples=true&tamanhoPagina=15&offset=0&direcaoOrdenacao=asc&colunaOrdenacao=descricao&colunasSelecionadas=numero%2Cdescricao%2CcodigoNcmSh%2CncmSh%2Ccfop%2Cquantidade%2Cunidade%2CvalorUnitario%2Cvalor&idIdentificacao=113801393&_=1657924711124 HTTP/1.1" 200 None
+DEBUG: https://portaltransparencia.gov.br:443 "GET /notas-fiscais/itens/resultado?paginacaoSimples=true&tamanhoPagina=15&offset=0&direcaoOrdenacao=asc&colunaOrdenacao=descricao&colunasSelecionadas=numero%2Cdescricao%2CcodigoNcmSh%2CncmSh%2Ccfop%2Cquantidade%2Cunidade%2CvalorUnitario%2Cvalor&idIdentificacao=125501352&_=1657924711124 HTTP/1.1" 200 270
+DEBUG: Starting new HTTPS connection (1): portaltransparencia.gov.br:443
+DEBUG: https://portaltransparencia.gov.br:443 "GET /notas-fiscais/eventos/resultado?paginacaoSimples=true&tamanhoPagina=15&offset=0&direcaoOrdenacao=asc&colunaOrdenacao=dataEvento&colunasSelecionadas=tipoEvento%2CdataEvento%2Cevento%2Cmotivo&idIdentificacao=125501352&_=1657935295275 HTTP/1.1" 200 None
+DEBUG: Record Saved!
+DEBUG: Scraped from <200 https://portaltransparencia.gov.br/notas-fiscais/52220619367660000133550010000116791166304992?ordenarPor=dataEvento&direcao=asc>
+{'chaveDeAcesso': '52220619367660000133550010000116791166304992',
+ 'dataDaUltimaModificacao': '20/06/2022 16:31:14',
+ 'dataDeEmissao': '20/06/2022 16:31:13',
+ 'destinatario': {'cnpj': '00.402.552/0009-83',
+                  'consumidorFinal': '1 - CONSUMIDOR FINAL',
+                  'destinoDaOperacao': '1 - OPERA√á√ÉO INTERNA',
+                  'indicadorIe': 'N√ÉO CONTRIBUINTE',
+                  'orgaoEntidadeVinculada': 'Comiss√£o Nacional de Energia '
+                                            'Nuclear',
+                  'orgaoSuperior': 'Minist√©rio da Ci√™ncia, Tecnologia, '
+                                   'Inova√ß√µes e Comunica√ß√µes',
+                  'presencaDoComprador': '1 - OPERA√á√ÉO PRESENCIAL',
+                  'uf': 'GO'},
+ 'emitente': {'cnpj': '19.367.660/0001-33',
+              'inscricaoEstadual': '105993220',
+              'nomeFantasia': 'YPE COM DE COMB E LUBRIFICANTES LTDA',
+              'nomeRazaoSocial': 'YPE COM DE COMB E LUBRIFICANTES LTDA',
+              'uf': 'GO'},
+ 'event_timestamp': datetime.datetime(2022, 7, 21, 23, 11, 39, 91312),
+ 'metadata': {'processingDate': '2022-07-21',
+              'processingId': '88d98bbb949631c707f927a434c30f75',
+              'sourceDateReference': '2022-06-21'},
+ 'modelo': '55 - NF-E EMITIDA EM SUBSTITUICAO AO MODELO 1 OU 1A',
+ 'naturezaDaOperacao': 'Venda Por Cupom Fiscal',
+ 'numero': '11679',
+ 'produtosServicos': {'cfop': '5929',
+                      'codigoNcmSh': '27101921',
+                      'descricao': 'OLEO DIESEL B COMUM',
+                      'ncmSh': 'Gas√≥leo (√≥leo diesel)',
+                      'numero': '1',
+                      'quantidade': '165,76',
+                      'unidade': 'LT',
+                      'valor': '1.075,78',
+                      'valorUnitario': '6,49'},
+ 'serie': '1',
+ 'situacao': 'Autoriza√ß√£o de Uso',
+ 'valorTotalDaNotaFiscalR': '1.075,78'}
+DEBUG: Crawled (200) <GET https://portaltransparencia.gov.br/notas-fiscais/12220606255086000180550010000089221040371116?ordenarPor=dataEvento&direcao=asc> (referer: https://portaltransparencia.gov.br/notas-fiscais/consulta/resultado?paginacaoSimples=true&tamanhoPagina=2&offset=0&direcaoOrdenacao=asc&colunaOrdenacao=municipioFornecedor&de=20%2F06%2F2022&ate=22%2F06%2F2022&colunasSelecionadas=linkDetalhamento%2CorgaoSuperiorDestinatario%2CorgaoDestinatario%2CnomeFornecedor%2CcnpjFornecedor%2CmunicipioFornecedor%2CufFornecedor%2CchaveNotaFiscal%2CvalorNotaFiscal%2CdataEmissao%2CtipoEventoMaisRecente%2Cnumero%2Cserie&_=1657650093440)
+DEBUG: Crawled (200) <GET https://portaltransparencia.gov.br/notas-fiscais/42220676824135000133550010000026781210735865?ordenarPor=dataEvento&direcao=asc> (referer: https://portaltransparencia.gov.br/notas-fiscais/consulta/resultado?paginacaoSimples=true&tamanhoPagina=2&offset=1&direcaoOrdenacao=asc&colunaOrdenacao=municipioFornecedor&de=20%2F06%2F2022&ate=22%2F06%2F2022&colunasSelecionadas=linkDetalhamento%2CorgaoSuperiorDestinatario%2CorgaoDestinatario%2CnomeFornecedor%2CcnpjFornecedor%2CmunicipioFornecedor%2CufFornecedor%2CchaveNotaFiscal%2CvalorNotaFiscal%2CdataEmissao%2CtipoEventoMaisRecente%2Cnumero%2Cserie&_=1657650093440)
+DEBUG: Starting new HTTPS connection (1): portaltransparencia.gov.br:443
+DEBUG: https://portaltransparencia.gov.br:443 "GET /notas-fiscais/itens/resultado?paginacaoSimples=true&tamanhoPagina=15&offset=0&direcaoOrdenacao=asc&colunaOrdenacao=descricao&colunasSelecionadas=numero%2Cdescricao%2CcodigoNcmSh%2CncmSh%2Ccfop%2Cquantidade%2Cunidade%2CvalorUnitario%2Cvalor&idIdentificacao=113801393&_=1657924711124 HTTP/1.1" 200 597
 DEBUG: Starting new HTTPS connection (1): portaltransparencia.gov.br:443
 DEBUG: https://portaltransparencia.gov.br:443 "GET /notas-fiscais/eventos/resultado?paginacaoSimples=true&tamanhoPagina=15&offset=0&direcaoOrdenacao=asc&colunaOrdenacao=dataEvento&colunasSelecionadas=tipoEvento%2CdataEvento%2Cevento%2Cmotivo&idIdentificacao=113801393&_=1657935295275 HTTP/1.1" 200 None
 DEBUG: Record Saved!
-DEBUG: Scraped from <200 https://portaltransparencia.gov.br/notas-fiscais/12220606255086000180550010000089221040371116?ordenarPor=dataEvento&direcao=asc>
+DEBUG: Scraped from <200 https://portaltransparencia.gov.br/notas-fiscais/12220606255086000180550010000089221040371116?ordenarPor=dataEvento&direcao=asc>
 {'chaveDeAcesso': '12220606255086000180550010000089221040371116',
  'dataDaUltimaModificacao': '20/06/2022 15:41:18',
  'dataDeEmissao': '20/06/2022 17:41:09',
  'destinatario': {'cnpj': '07.552.636/0001-95',
                   'consumidorFinal': '0 - NORMAL',
-                  'destinoDaOperacao': '1 - OPERA«√O INTERNA',
-                  'indicadorIe': 'N√O CONTRIBUINTE',
-                  'orgaoEntidadeVinculada': 'Comando do ExÈrcito',
-                  'orgaoSuperior': 'MinistÈrio da Defesa',
-                  'presencaDoComprador': '1 - OPERA«√O PRESENCIAL',
+                  'destinoDaOperacao': '1 - OPERA√á√ÉO INTERNA',
+                  'indicadorIe': 'N√ÉO CONTRIBUINTE',
+                  'orgaoEntidadeVinculada': 'Comando do Ex√©rcito',
+                  'orgaoSuperior': 'Minist√©rio da Defesa',
+                  'presencaDoComprador': '1 - OPERA√á√ÉO PRESENCIAL',
                   'uf': 'AC'},
  'emitente': {'cnpj': '06.255.086/0001-80',
               'inscricaoEstadual': '0101564400135',
               'nomeFantasia': 'SO FILTROS AGUA PURA',
               'nomeRazaoSocial': 'V.L.F. GASPAR COMERCIO DE SERVICOS LTDA  ME',
               'uf': 'AC'},
- 'event_timestamp': datetime.datetime(2022, 7, 19, 21, 11, 2, 130361),
+ 'event_timestamp': datetime.datetime(2022, 7, 21, 23, 11, 40, 653033),
+ 'metadata': {'processingDate': '2022-07-21',
+              'processingId': '88d98bbb949631c707f927a434c30f75',
+              'sourceDateReference': '2022-06-21'},
  'modelo': '55 - NF-E EMITIDA EM SUBSTITUICAO AO MODELO 1 OU 1A',
  'naturezaDaOperacao': 'VENDA SUBST. TRIBUTARIA SUBSTITUIDO',
  'numero': '8922',
@@ -83,73 +139,74 @@ DEBUG: Scraped from <200 https://portaltransparencia.gov.br/notas-fiscais/122206
                       'descricao': 'ELEMENTRO FILTRANTE POLIPROPILENO PS 510 5 '
                                    'MICRON 230',
                       'ncmSh': 'Outras partes de aparelhos para filtrar ou '
-                               'depurar lÌquidos, etc.',
+                               'depurar l√≠quidos, etc.',
                       'numero': '2',
                       'quantidade': '1,00',
                       'unidade': 'UN',
                       'valor': '30,00',
                       'valorUnitario': '30,00'},
  'serie': '1',
- 'situacao': 'AutorizaÁ„o de Uso',
+ 'situacao': 'Autoriza√ß√£o de Uso',
  'valorTotalDaNotaFiscalR': '127,00'}
-DEBUG: Crawled (200) <GET https://portaltransparencia.gov.br/notas-fiscais/42220697541831000102550010000017341610286204?ordenarPor=dataEvento&direcao=asc> (referer: https://portaltransparencia.gov.br/notas-fiscais/consulta/resultado?paginacaoSimples=true&tamanhoPagina=2&offset=1&direcaoOrdenacao=asc&colunaOrdenacao=municipioFornecedor&de=18%2F06%2F2022&ate=20%2F06%2F2022&colunasSelecionadas=linkDetalhamento%2CorgaoSuperiorDestinatario%2CorgaoDestinatario%2CnomeFornecedor%2CcnpjFornecedor%2CmunicipioFornecedor%2CufFornecedor%2CchaveNotaFiscal%2CvalorNotaFiscal%2CdataEmissao%2CtipoEventoMaisRecente%2Cnumero%2Cserie&_=1657650093440)
+DEBUG: Crawled (200) <GET https://portaltransparencia.gov.br/notas-fiscais/42220697541831000102550010000017341610286204?ordenarPor=dataEvento&direcao=asc> (referer: https://portaltransparencia.gov.br/notas-fiscais/consulta/resultado?paginacaoSimples=true&tamanhoPagina=2&offset=2&direcaoOrdenacao=asc&colunaOrdenacao=municipioFornecedor&de=20%2F06%2F2022&ate=22%2F06%2F2022&colunasSelecionadas=linkDetalhamento%2CorgaoSuperiorDestinatario%2CorgaoDestinatario%2CnomeFornecedor%2CcnpjFornecedor%2CmunicipioFornecedor%2CufFornecedor%2CchaveNotaFiscal%2CvalorNotaFiscal%2CdataEmissao%2CtipoEventoMaisRecente%2Cnumero%2Cserie&_=1657650093440)
 DEBUG: Starting new HTTPS connection (1): portaltransparencia.gov.br:443
-DEBUG: https://portaltransparencia.gov.br:443 "GET /notas-fiscais/itens/resultado?paginacaoSimples=true&tamanhoPagina=15&offset=0&direcaoOrdenacao=asc&colunaOrdenacao=descricao&colunasSelecionadas=numero%2Cdescricao%2CcodigoNcmSh%2CncmSh%2Ccfop%2Cquantidade%2Cunidade%2CvalorUnitario%2Cvalor&idIdentificacao=125501352&_=1657924711124 HTTP/1.1" 200 None
+DEBUG: https://portaltransparencia.gov.br:443 "GET /notas-fiscais/itens/resultado?paginacaoSimples=true&tamanhoPagina=15&offset=0&direcaoOrdenacao=asc&colunaOrdenacao=descricao&colunasSelecionadas=numero%2Cdescricao%2CcodigoNcmSh%2CncmSh%2Ccfop%2Cquantidade%2Cunidade%2CvalorUnitario%2Cvalor&idIdentificacao=115201371&_=1657924711124 HTTP/1.1" 200 272
 DEBUG: Starting new HTTPS connection (1): portaltransparencia.gov.br:443
-DEBUG: https://portaltransparencia.gov.br:443 "GET /notas-fiscais/eventos/resultado?paginacaoSimples=true&tamanhoPagina=15&offset=0&direcaoOrdenacao=asc&colunaOrdenacao=dataEvento&colunasSelecionadas=tipoEvento%2CdataEvento%2Cevento%2Cmotivo&idIdentificacao=125501352&_=1657935295275 HTTP/1.1" 200 None
+DEBUG: https://portaltransparencia.gov.br:443 "GET /notas-fiscais/eventos/resultado?paginacaoSimples=true&tamanhoPagina=15&offset=0&direcaoOrdenacao=asc&colunaOrdenacao=dataEvento&colunasSelecionadas=tipoEvento%2CdataEvento%2Cevento%2Cmotivo&idIdentificacao=115201371&_=1657935295275 HTTP/1.1" 200 None
 DEBUG: Record Saved!
-DEBUG: Scraped from <200 https://portaltransparencia.gov.br/notas-fiscais/52220619367660000133550010000116791166304992?ordenarPor=dataEvento&direcao=asc>
-{'chaveDeAcesso': '52220619367660000133550010000116791166304992',
- 'dataDaUltimaModificacao': '20/06/2022 16:31:14',
- 'dataDeEmissao': '20/06/2022 16:31:13',
- 'destinatario': {'cnpj': '00.402.552/0009-83',
+DEBUG: Scraped from <200 https://portaltransparencia.gov.br/notas-fiscais/42220676824135000133550010000026781210735865?ordenarPor=dataEvento&direcao=asc>
+{'chaveDeAcesso': '42220676824135000133550010000026781210735865',
+ 'dataDaUltimaModificacao': '21/06/2022 17:41:52',
+ 'dataDeEmissao': '21/06/2022 17:37:49',
+ 'destinatario': {'cnpj': '10.635.424/0005-00',
                   'consumidorFinal': '1 - CONSUMIDOR FINAL',
-                  'destinoDaOperacao': '1 - OPERA«√O INTERNA',
-                  'indicadorIe': 'N√O CONTRIBUINTE',
-                  'orgaoEntidadeVinculada': 'Comiss„o Nacional de Energia '
-                                            'Nuclear',
-                  'orgaoSuperior': 'MinistÈrio da CiÍncia, Tecnologia, '
-                                   'InovaÁıes e ComunicaÁıes',
-                  'presencaDoComprador': '1 - OPERA«√O PRESENCIAL',
-                  'uf': 'GO'},
- 'emitente': {'cnpj': '19.367.660/0001-33',
-              'inscricaoEstadual': '105993220',
-              'nomeFantasia': 'YPE COM DE COMB E LUBRIFICANTES LTDA',
-              'nomeRazaoSocial': 'YPE COM DE COMB E LUBRIFICANTES LTDA',
-              'uf': 'GO'},
- 'event_timestamp': datetime.datetime(2022, 7, 19, 21, 11, 2, 558393),
+                  'destinoDaOperacao': '1 - OPERA√á√ÉO INTERNA',
+                  'indicadorIe': 'N√ÉO CONTRIBUINTE',
+                  'orgaoEntidadeVinculada': 'Instituto Federal Catarinense',
+                  'orgaoSuperior': 'Minist√©rio da Educa√ß√£o',
+                  'presencaDoComprador': '9 - OPERA√á√ÉO N√ÉO PRESENCIAL, OUTROS',
+                  'uf': 'SC'},
+ 'emitente': {'cnpj': '76.824.135/0001-33',
+              'inscricaoEstadual': '250977621',
+              'nomeFantasia': 'SUPERMERCADO BEM BRASIL',
+              'nomeRazaoSocial': 'SUPERMERCADO BEM BRASIL LTDA',
+              'uf': 'SC'},
+ 'event_timestamp': datetime.datetime(2022, 7, 21, 23, 11, 41, 160257),
+ 'metadata': {'processingDate': '2022-07-21',
+              'processingId': '88d98bbb949631c707f927a434c30f75',
+              'sourceDateReference': '2022-06-21'},
  'modelo': '55 - NF-E EMITIDA EM SUBSTITUICAO AO MODELO 1 OU 1A',
- 'naturezaDaOperacao': 'Venda Por Cupom Fiscal',
- 'numero': '11679',
- 'produtosServicos': {'cfop': '5929',
-                      'codigoNcmSh': '27101921',
-                      'descricao': 'OLEO DIESEL B COMUM',
-                      'ncmSh': 'GasÛleo (Ûleo diesel)',
+ 'naturezaDaOperacao': 'VENDA DE MERCADORIA',
+ 'numero': '2678',
+ 'produtosServicos': {'cfop': '5405',
+                      'codigoNcmSh': '27111910',
+                      'descricao': 'GAS GLP 13KG',
+                      'ncmSh': 'G√°s liquefeito de petr√≥leo (glp)',
                       'numero': '1',
-                      'quantidade': '165,76',
-                      'unidade': 'LT',
-                      'valor': '1.075,78',
-                      'valorUnitario': '6,49'},
+                      'quantidade': '5,00',
+                      'unidade': 'UN',
+                      'valor': '747,50',
+                      'valorUnitario': '149,50'},
  'serie': '1',
- 'situacao': 'AutorizaÁ„o de Uso',
- 'valorTotalDaNotaFiscalR': '1.075,78'}
-DEBUG: Crawled (200) <GET https://portaltransparencia.gov.br/notas-fiscais/consulta/resultado?paginacaoSimples=true&tamanhoPagina=2&offset=2&direcaoOrdenacao=asc&colunaOrdenacao=municipioFornecedor&de=18%2F06%2F2022&ate=20%2F06%2F2022&colunasSelecionadas=linkDetalhamento%2CorgaoSuperiorDestinatario%2CorgaoDestinatario%2CnomeFornecedor%2CcnpjFornecedor%2CmunicipioFornecedor%2CufFornecedor%2CchaveNotaFiscal%2CvalorNotaFiscal%2CdataEmissao%2CtipoEventoMaisRecente%2Cnumero%2Cserie&_=1657650093440> (referer: https://portaltransparencia.gov.br/notas-fiscais/consulta/resultado?paginacaoSimples=true&tamanhoPagina=2&offset=1&direcaoOrdenacao=asc&colunaOrdenacao=municipioFornecedor&de=18%2F06%2F2022&ate=20%2F06%2F2022&colunasSelecionadas=linkDetalhamento%2CorgaoSuperiorDestinatario%2CorgaoDestinatario%2CnomeFornecedor%2CcnpjFornecedor%2CmunicipioFornecedor%2CufFornecedor%2CchaveNotaFiscal%2CvalorNotaFiscal%2CdataEmissao%2CtipoEventoMaisRecente%2Cnumero%2Cserie&_=1657650093440) ['partial']
+ 'situacao': 'Autoriza√ß√£o de Uso',
+ 'valorTotalDaNotaFiscalR': '747,50'}
+DEBUG: Crawled (200) <GET https://portaltransparencia.gov.br/notas-fiscais/consulta/resultado?paginacaoSimples=true&tamanhoPagina=2&offset=3&direcaoOrdenacao=asc&colunaOrdenacao=municipioFornecedor&de=20%2F06%2F2022&ate=22%2F06%2F2022&colunasSelecionadas=linkDetalhamento%2CorgaoSuperiorDestinatario%2CorgaoDestinatario%2CnomeFornecedor%2CcnpjFornecedor%2CmunicipioFornecedor%2CufFornecedor%2CchaveNotaFiscal%2CvalorNotaFiscal%2CdataEmissao%2CtipoEventoMaisRecente%2Cnumero%2Cserie&_=1657650093440> (referer: https://portaltransparencia.gov.br/notas-fiscais/consulta/resultado?paginacaoSimples=true&tamanhoPagina=2&offset=2&direcaoOrdenacao=asc&colunaOrdenacao=municipioFornecedor&de=20%2F06%2F2022&ate=22%2F06%2F2022&colunasSelecionadas=linkDetalhamento%2CorgaoSuperiorDestinatario%2CorgaoDestinatario%2CnomeFornecedor%2CcnpjFornecedor%2CmunicipioFornecedor%2CufFornecedor%2CchaveNotaFiscal%2CvalorNotaFiscal%2CdataEmissao%2CtipoEventoMaisRecente%2Cnumero%2Cserie&_=1657650093440) ['partial']
 DEBUG: Starting new HTTPS connection (1): portaltransparencia.gov.br:443
-DEBUG: https://portaltransparencia.gov.br:443 "GET /notas-fiscais/itens/resultado?paginacaoSimples=true&tamanhoPagina=15&offset=0&direcaoOrdenacao=asc&colunaOrdenacao=descricao&colunasSelecionadas=numero%2Cdescricao%2CcodigoNcmSh%2CncmSh%2Ccfop%2Cquantidade%2Cunidade%2CvalorUnitario%2Cvalor&idIdentificacao=111001370&_=1657924711124 HTTP/1.1" 200 None
+DEBUG: https://portaltransparencia.gov.br:443 "GET /notas-fiscais/itens/resultado?paginacaoSimples=true&tamanhoPagina=15&offset=0&direcaoOrdenacao=asc&colunaOrdenacao=descricao&colunasSelecionadas=numero%2Cdescricao%2CcodigoNcmSh%2CncmSh%2Ccfop%2Cquantidade%2Cunidade%2CvalorUnitario%2Cvalor&idIdentificacao=111001370&_=1657924711124 HTTP/1.1" 200 277
 DEBUG: Starting new HTTPS connection (1): portaltransparencia.gov.br:443
 DEBUG: https://portaltransparencia.gov.br:443 "GET /notas-fiscais/eventos/resultado?paginacaoSimples=true&tamanhoPagina=15&offset=0&direcaoOrdenacao=asc&colunaOrdenacao=dataEvento&colunasSelecionadas=tipoEvento%2CdataEvento%2Cevento%2Cmotivo&idIdentificacao=111001370&_=1657935295275 HTTP/1.1" 200 None
 DEBUG: Record Saved!
-DEBUG: Scraped from <200 https://portaltransparencia.gov.br/notas-fiscais/42220697541831000102550010000017341610286204?ordenarPor=dataEvento&direcao=asc>
+DEBUG: Scraped from <200 https://portaltransparencia.gov.br/notas-fiscais/42220697541831000102550010000017341610286204?ordenarPor=dataEvento&direcao=asc>
 {'chaveDeAcesso': '42220697541831000102550010000017341610286204',
  'dataDaUltimaModificacao': '20/06/2022 13:22:11',
  'dataDeEmissao': '20/06/2022 13:22:08',
  'destinatario': {'cnpj': '09.650.285/0001-80',
                   'consumidorFinal': '0 - NORMAL',
-                  'destinoDaOperacao': '2 - OPERA«√O INTERESTADUAL',
-                  'indicadorIe': 'N√O CONTRIBUINTE',
-                  'orgaoEntidadeVinculada': 'Comando do ExÈrcito',
-                  'orgaoSuperior': 'MinistÈrio da Defesa',
-                  'presencaDoComprador': '1 - OPERA«√O PRESENCIAL',
+                  'destinoDaOperacao': '2 - OPERA√á√ÉO INTERESTADUAL',
+                  'indicadorIe': 'N√ÉO CONTRIBUINTE',
+                  'orgaoEntidadeVinculada': 'Comando do Ex√©rcito',
+                  'orgaoSuperior': 'Minist√©rio da Defesa',
+                  'presencaDoComprador': '1 - OPERA√á√ÉO PRESENCIAL',
                   'uf': 'RJ'},
  'emitente': {'cnpj': '97.541.831/0001-02',
               'inscricaoEstadual': '257153543',
@@ -158,7 +215,10 @@ DEBUG: Scraped from <200 https://portaltransparencia.gov.br/notas-fiscais/422206
               'nomeRazaoSocial': 'GESSICA ZARZEKA OLIVO  GRM MAQUINAS E '
                                  'LOCACOES  ME',
               'uf': 'SC'},
- 'event_timestamp': datetime.datetime(2022, 7, 19, 21, 11, 3, 87360),
+ 'event_timestamp': datetime.datetime(2022, 7, 21, 23, 11, 41, 596759),
+ 'metadata': {'processingDate': '2022-07-21',
+              'processingId': '88d98bbb949631c707f927a434c30f75',
+              'sourceDateReference': '2022-06-21'},
  'modelo': '55 - NF-E EMITIDA EM SUBSTITUICAO AO MODELO 1 OU 1A',
  'naturezaDaOperacao': 'VENDA',
  'numero': '1734',
@@ -172,51 +232,8 @@ DEBUG: Scraped from <200 https://portaltransparencia.gov.br/notas-fiscais/422206
                       'valor': '1.854,99',
                       'valorUnitario': '1.854,99'},
  'serie': '1',
- 'situacao': 'AutorizaÁ„o de Uso',
+ 'situacao': 'Autoriza√ß√£o de Uso',
  'valorTotalDaNotaFiscalR': '1.854,99'}
-DEBUG: Crawled (200) <GET https://portaltransparencia.gov.br/notas-fiscais/42220697541831000102550010000017371441008328?ordenarPor=dataEvento&direcao=asc> (referer: https://portaltransparencia.gov.br/notas-fiscais/consulta/resultado?paginacaoSimples=true&tamanhoPagina=2&offset=2&direcaoOrdenacao=asc&colunaOrdenacao=municipioFornecedor&de=18%2F06%2F2022&ate=20%2F06%2F2022&colunasSelecionadas=linkDetalhamento%2CorgaoSuperiorDestinatario%2CorgaoDestinatario%2CnomeFornecedor%2CcnpjFornecedor%2CmunicipioFornecedor%2CufFornecedor%2CchaveNotaFiscal%2CvalorNotaFiscal%2CdataEmissao%2CtipoEventoMaisRecente%2Cnumero%2Cserie&_=1657650093440)
-DEBUG: Crawled (200) <GET https://portaltransparencia.gov.br/notas-fiscais/consulta/resultado?paginacaoSimples=true&tamanhoPagina=2&offset=3&direcaoOrdenacao=asc&colunaOrdenacao=municipioFornecedor&de=18%2F06%2F2022&ate=20%2F06%2F2022&colunasSelecionadas=linkDetalhamento%2CorgaoSuperiorDestinatario%2CorgaoDestinatario%2CnomeFornecedor%2CcnpjFornecedor%2CmunicipioFornecedor%2CufFornecedor%2CchaveNotaFiscal%2CvalorNotaFiscal%2CdataEmissao%2CtipoEventoMaisRecente%2Cnumero%2Cserie&_=1657650093440> (referer: https://portaltransparencia.gov.br/notas-fiscais/consulta/resultado?paginacaoSimples=true&tamanhoPagina=2&offset=2&direcaoOrdenacao=asc&colunaOrdenacao=municipioFornecedor&de=18%2F06%2F2022&ate=20%2F06%2F2022&colunasSelecionadas=linkDetalhamento%2CorgaoSuperiorDestinatario%2CorgaoDestinatario%2CnomeFornecedor%2CcnpjFornecedor%2CmunicipioFornecedor%2CufFornecedor%2CchaveNotaFiscal%2CvalorNotaFiscal%2CdataEmissao%2CtipoEventoMaisRecente%2Cnumero%2Cserie&_=1657650093440) ['partial']
-DEBUG: Starting new HTTPS connection (1): portaltransparencia.gov.br:443
-DEBUG: https://portaltransparencia.gov.br:443 "GET /notas-fiscais/itens/resultado?paginacaoSimples=true&tamanhoPagina=15&offset=0&direcaoOrdenacao=asc&colunaOrdenacao=descricao&colunasSelecionadas=numero%2Cdescricao%2CcodigoNcmSh%2CncmSh%2Ccfop%2Cquantidade%2Cunidade%2CvalorUnitario%2Cvalor&idIdentificacao=106301385&_=1657924711124 HTTP/1.1" 200 None
-DEBUG: Starting new HTTPS connection (1): portaltransparencia.gov.br:443
-DEBUG: https://portaltransparencia.gov.br:443 "GET /notas-fiscais/eventos/resultado?paginacaoSimples=true&tamanhoPagina=15&offset=0&direcaoOrdenacao=asc&colunaOrdenacao=dataEvento&colunasSelecionadas=tipoEvento%2CdataEvento%2Cevento%2Cmotivo&idIdentificacao=106301385&_=1657935295275 HTTP/1.1" 200 None
-DEBUG: Record Saved!
-DEBUG: Scraped from <200 https://portaltransparencia.gov.br/notas-fiscais/42220697541831000102550010000017371441008328?ordenarPor=dataEvento&direcao=asc>
-{'chaveDeAcesso': '42220697541831000102550010000017371441008328',
- 'dataDaUltimaModificacao': '20/06/2022 14:37:53',
- 'dataDeEmissao': '20/06/2022 14:37:50',
- 'destinatario': {'cnpj': '31.543.958/0001-52',
-                  'consumidorFinal': '0 - NORMAL',
-                  'destinoDaOperacao': '2 - OPERA«√O INTERESTADUAL',
-                  'indicadorIe': 'N√O CONTRIBUINTE',
-                  'orgaoEntidadeVinculada': 'Comando do ExÈrcito',
-                  'orgaoSuperior': 'MinistÈrio da Defesa',
-                  'presencaDoComprador': '1 - OPERA«√O PRESENCIAL',
-                  'uf': 'PE'},
- 'emitente': {'cnpj': '97.541.831/0001-02',
-              'inscricaoEstadual': '257153543',
-              'nomeFantasia': 'GESSICA ZARZEKA OLIVO  GRM MAQUINAS E LOCACOES  '
-                              'ME',
-              'nomeRazaoSocial': 'GESSICA ZARZEKA OLIVO  GRM MAQUINAS E '
-                                 'LOCACOES  ME',
-              'uf': 'SC'},
- 'event_timestamp': datetime.datetime(2022, 7, 19, 21, 11, 3, 956728),
- 'modelo': '55 - NF-E EMITIDA EM SUBSTITUICAO AO MODELO 1 OU 1A',
- 'naturezaDaOperacao': 'VENDA',
- 'numero': '1737',
- 'produtosServicos': {'cfop': '6102',
-                      'codigoNcmSh': '84678900',
-                      'descricao': 'ROCADEIRA FS 220 STIHL',
-                      'ncmSh': 'Outras ferramentas hidr·ulicas de motor n„o '
-                               'elÈtrico, de uso manual',
-                      'numero': '2',
-                      'quantidade': '1,00',
-                      'unidade': 'UN',
-                      'valor': '2.839,33',
-                      'valorUnitario': '2.839,33'},
- 'serie': '1',
- 'situacao': 'AutorizaÁ„o de Uso',
- 'valorTotalDaNotaFiscalR': '5.678,66'}
 INFO: NO MORE PAGES
 INFO: Queue End's....
 INFO: Closing spider (finished)
@@ -224,19 +241,21 @@ INFO: Dumping Scrapy stats:
 {'downloader/request_bytes': 8520,
  'downloader/request_count': 9,
  'downloader/request_method_count/GET': 9,
- 'downloader/response_bytes': 60456,
+ 'downloader/response_bytes': 60450,
  'downloader/response_count': 9,
  'downloader/response_status_count/200': 9,
  'dupefilter/filtered': 2,
- 'elapsed_time_seconds': 4.008342,
+ 'elapsed_time_seconds': 3.727068,
  'finish_reason': 'finished',
- 'finish_time': datetime.datetime(2022, 7, 20, 0, 11, 3, 976751),
- 'httpcompression/response_bytes': 189074,
+ 'finish_time': datetime.datetime(2022, 7, 21, 23, 11, 41, 634188),
+ 'httpcompression/response_bytes': 189035,
  'httpcompression/response_count': 5,
  'item_scraped_count': 4,
- 'log_count/DEBUG': 40,
+ 'log_count/DEBUG': 47,
  'log_count/INFO': 12,
  'log_count/WARNING': 1,
+ 'memusage/max': 74797056,
+ 'memusage/startup': 74797056,
  'request_depth_max': 3,
  'response_received_count': 9,
  'robotstxt/request_count': 1,
@@ -246,5 +265,5 @@ INFO: Dumping Scrapy stats:
  'scheduler/dequeued/memory': 8,
  'scheduler/enqueued': 8,
  'scheduler/enqueued/memory': 8,
- 'start_time': datetime.datetime(2022, 7, 20, 0, 10, 59, 968409)}
+ 'start_time': datetime.datetime(2022, 7, 21, 23, 11, 37, 907120)}
 INFO: Spider closed (finished)

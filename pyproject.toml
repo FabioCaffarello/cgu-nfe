@@ -8,7 +8,7 @@ exclude_lines = [ ]
 show_missing = true
 
 [tool.pytest.ini_options]
-addopts = "--cov --cov-report html:'cgu_nfe/cgu_nfe/spiders/tests/reports/cov/html' --cov-report xml:'cgu_nfe/cgu_nfe/spiders/tests/reports/cov/coverage.xml' --junitxml='cgu_nfe/cgu_nfe/spiders/tests/reports/unittest/junit.xml' --html='cgu_nfe/cgu_nfe/spiders/tests/reports/unittest/html/index.html'"
+addopts = "--cov --cov-report html:'./cgu_nfe/cgu_nfe/spiders/tests/reports/cov/html' --cov-report xml:'./cgu_nfe/cgu_nfe/spiders/tests/reports/cov/coverage.xml' --junitxml='./cgu_nfe/cgu_nfe/spiders/tests/reports/unittest/junit.xml' --html='./cgu_nfe/cgu_nfe/spiders/tests/reports/unittest/html/index.html'"
 
 
 [tool.poetry]
