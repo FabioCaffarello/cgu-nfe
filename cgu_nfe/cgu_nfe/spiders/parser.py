@@ -1,19 +1,17 @@
 import re
 import unicodedata
-from attr import field
-import attrs
-from . import static, input
-import urllib.parse
+
 from bs4 import BeautifulSoup
 from bs4.element import ResultSet
+
+from . import input, static
+
 
 class GenerateUrlRequest(input.Input):
     def __init__(self):
         super().__init__()
 
     def generate_url_index_request(self, offset):
-        # filter_gte = urllib.parse.quote('01/07/2022', safe='')
-        # filter_lt = urllib.parse.quote('02/07/2022', safe='')
         url = "".join([
             static.HOST,
             static.PARAMS,
@@ -62,6 +60,7 @@ def _get_soup(raw_data):
     except Exception:
         return None
 
+
 def parse_nfe_details_data(raw_data):
     soup_raw_data = _get_soup(raw_data)
     parsed_data = (
@@ -78,6 +77,7 @@ def parse_nfe_details_data(raw_data):
 
     return parsed_data
 
+
 def get_filter_id(raw_data):
     soup_raw_data = _get_soup(raw_data)
     parsed_data = (
@@ -90,7 +90,6 @@ def get_filter_id(raw_data):
         if "idIdentificacao" in tag.text:
             idIdentificacao = re.search(r'idIdentificacao = "([0-9]*)";', tag.text).group(1)
     return idIdentificacao
-    # return parsed_data
 
 
 def get_nfe_fields(parsed_data: ResultSet):
@@ -131,6 +130,7 @@ def camel_case_format(text: str) -> str:
     ])
 
     return text_formated
+
 
 def normalize_text(text: str) -> str:
 

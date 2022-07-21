@@ -1,0 +1,167 @@
+metadata:
+  _metadata:
+    jobName: cgu_nfe
+    sourceLink: https://portaltransparencia.gov.br/notas-fiscais/consulta?ordenarPor=municipioFornecedor&direcao=asc
+  outputs:
+    layer: raw
+    data:
+      type: object
+      properties:
+        chaveDeAcesso:
+          type: string
+          examples:
+            - "42220697846780000102550010000017371441008328"
+            - "54183100010255001000001737144100832842220697"
+        valorTotalDaNotaFiscalR:
+          type: string
+          examples:
+            - "1.075,78"
+            - "8.759,89"
+        modelo:
+          type: string
+          examples:
+            - "55 - NF-E EMITIDA EM SUBSTITUICAO AO MODELO 1 OU 1A"
+        serie:
+          type: string
+          examples:
+            - "1"
+            - "2"
+        numero:
+          type: string
+          examples:
+            - "11679"
+            - "12667"
+        dataDeEmissao:
+          type: string
+          examples:
+            - "20/06/2022 16:31:13"
+            - "22/06/2022 11:37:17"
+        naturezaDaOperacao:
+          type: string
+          examples:
+            - "Venda Por Cupom Fiscal"
+        situacao:
+          type: string
+          examples:
+            - "Autorização de Uso"
+        dataDaUltimaModificacao:
+          type: string
+          examples:
+            - "20/06/2022 16:31:14"
+            - "22/06/2022 11:37:18"
+        destinatario:
+          type: object
+          fields:
+            cnpj:
+              type: string
+              examples:
+                - "00.432.552/0009-75"
+            consumidorFinal:
+              type: string
+              examples:
+                - "1 - CONSUMIDOR FINAL"
+            destinoDaOperacao:
+              type: string
+              examples:
+                - "1 - OPERAÇÃO INTERNA"
+            indicadorIe:
+              type: string
+              examples:
+                - "NÃO CONTRIBUINTE"
+            orgaoEntidadeVinculada:
+              type: string
+              examples:
+                - "Comissão Nacional de Energia Nuclear"
+            orgaoSuperior:
+              type: string
+              examples:
+                - "Ministério da Ciência, Tecnologia, Inovações e Comunicações"
+            presencaDoComprador:
+              type: string
+              examples:
+                - "1 - OPERAÇÃO PRESENCIAL"
+            uf:
+              type: string
+              examples:
+                - "GO"
+        emitente:
+          type: object
+          fields:
+            cnpj:
+              type: string
+              examples:
+                - "00.792.112/0009-73"
+            inscricaoEstadual:
+              type: string
+              examples:
+                - "105993220"
+            nomeFantasia:
+              type: string
+              examples:
+                - "YPE COM DE COMB E LUBRIFICANTES LTDA"
+            nomeRazaoSocial:
+              type: string
+              examples:
+                - "YPE COM DE COMB E LUBRIFICANTES LTDA"
+            uf:
+              type: string
+              examples:
+                - "GO"
+        produtosServicos:
+          type: object
+          fields:
+            cfop:
+              type: string
+              examples:
+                - "5929"
+            codigoNcmSh:
+              type: string
+              examples:
+                - "27101921"
+            descricao:
+              type: string
+              examples:
+                - "OLEO DIESEL B COMUM"
+            ncmSh:
+              type: string
+              examples:
+                - "Gasóleo (óleo diesel)"
+            numero:
+              type: string
+              examples:
+                - "1"
+            quantidade:
+              type: string
+              examples:
+                - "165,76"
+            unidade:
+              type: string
+              examples:
+              - "LT"
+            valor:
+              type: string
+              examples:
+              - "1.075,78"
+            valorUnitario:
+              type: string
+              examples:
+              - "6,49"
+        event_timestamp:
+          type: timestamp
+          examples:
+          - "2022-07-19 20:42:21"
+        metadata:
+          type: object
+          fields:
+            processingDate:
+            type: string
+            examples:
+            - "2022-07-21"
+            sourceDateReference:
+              type: string
+              examples:
+              - "2022-06-21"
+            processingId:
+              type: string
+              examples:
+              - "88d98bbb949631c707f927a434c30f75"

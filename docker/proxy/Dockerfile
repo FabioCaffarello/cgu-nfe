@@ -14,4 +14,4 @@ RUN poetry install --without dev
 
 EXPOSE 8000
 
-ENTRYPOINT ["poetry", "run", "teste"]
+ENTRYPOINT ["poetry", "run", "proxy"]
