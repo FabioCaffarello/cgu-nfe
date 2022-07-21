@@ -13,6 +13,7 @@ class CguNfeLoader(ItemLoader):
     def add_fields(self, fields):
         for key, value in fields.items():
             globals()[f"{key}"] = value
+        self.add_value('metadata', None)
         self.add_value('chaveDeAcesso', chaveDeAcesso)
         self.add_value('valorTotalDaNotaFiscalR', valorTotalDaNotaFiscalR)
         self.add_value('modelo', parser.normalize_text(modelo))
@@ -31,6 +32,7 @@ class CguNfeLoader(ItemLoader):
 
 
 class CguNfeItem(Item):
+    metadata = scrapy.Field()
     chaveDeAcesso = scrapy.Field()
     valorTotalDaNotaFiscalR = scrapy.Field()
     modelo = scrapy.Field()

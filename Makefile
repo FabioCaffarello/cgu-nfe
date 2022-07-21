@@ -3,3 +3,6 @@ jira-issue:
 
 lint:
 	poetry run flake8
+
+check-integration:
+	docker-compose up --build

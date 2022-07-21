@@ -1,8 +1,10 @@
 from . import server_status
 
+
 class BaseError(Exception):
     """Base Error"""
     pass
+
 
 class CrawlingError(BaseError):
     """A crawling error happened"""

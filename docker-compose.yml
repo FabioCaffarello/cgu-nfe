@@ -1,9 +1,10 @@
-version: "2"
+version: "3"
 
 services:
   redis:
     container_name: redis
     image: redis/redis-stack-server:latest
+    restart: always
     ports:
       - 6379:6379
     networks:
@@ -18,6 +19,34 @@ services:
       - redis
     links:
       - redis
+    networks:
+      - dataplatform-network
+
+  mongodb:
+    container_name: mongodb
+    image: mongo
+    restart: always
+    ports:
+      - 27017:27017
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: "1234"
+    networks:
+      - dataplatform-network
+
+  bot:
+    container_name: bot
+    build: ./
+    ports:
+      - 8888:8888
+    depends_on:
+      - mongodb
+      - redis
+      - proxy
+    links:
+      - mongodb
+      - redis
+
     networks:
       - dataplatform-network
 

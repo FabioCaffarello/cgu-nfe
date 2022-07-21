@@ -32,7 +32,7 @@ class GetProxy:
 
     def _proxy_validation(self, proxy):
         try:
-            response = requests.get(self._url_proxy_valid, proxies={"http": proxy, "https": proxy}, timeout=5)
+            requests.get(self._url_proxy_valid, proxies={"http": proxy, "https": proxy}, timeout=5)
             self.proxy_pool.append(proxy)
             self.to_redis(proxy)
         except:
@@ -45,9 +45,10 @@ class GetProxy:
 
     def to_redis(self, proxy):
         cache = redis.Redis(
-            host='http://0.0.0.0',
+            host='redis',
             port='6379',
             db=0,
+            decode_responses=True
         )
 
         return cache.zadd('proxy', {proxy: 0})
@@ -56,8 +57,3 @@ class GetProxy:
 def main():
     proxy_client = GetProxy()
     proxy_client.get_proxy_pool()
-
-def test_run():
-    proxy_client = GetProxy()
-    proxy_client.to_redis("Deu Bom!")
-    print("Deu Bom!")

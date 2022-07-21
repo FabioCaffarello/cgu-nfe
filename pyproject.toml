@@ -17,7 +17,6 @@ version = "0.1.0"
 description = "Bot for crawl Electronic Invoices data from CGU"
 authors = ["FabioCaffarello <fabio.caffarello@gmail.com>"]
 maintainers = ["FabioCaffarello <fabio.caffarello@gmail.com>"]
-readme = "README.md"
 repository = "https://github.com/FLC-Data/cgu-nfe"
 
   [tool.poetry.dependencies]
@@ -28,6 +27,8 @@ repository = "https://github.com/FLC-Data/cgu-nfe"
   beautifulsoup4 = "^4.11.1"
   pymongo = "^4.1.1"
   redis = "^4.3.4"
+  PyYAML = "^6.0"
+  python-dotenv = "^0.20.0"
 
   [tool.poetry.dev-dependencies]
   flake8 = "3.9.2"
@@ -42,7 +43,6 @@ repository = "https://github.com/FLC-Data/cgu-nfe"
 
   [tool.poetry.scripts]
   cli = "modules.cli.cli:cli"
-  teste = "modules.proxy.proxy:test_run"
 
 [build-system]
 requires = ["poetry-core"]

@@ -7,21 +7,8 @@
 #     https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 
-# FEED = {
-#         './output.jsonl': {
-#             'format': 'jsonlines',
-#             'encoding': 'utf8',
-#             'overwrite': 'True'
-#             },
-#         }
-# FEED_URI = "../data/output.jsonl"
-# FEED_FORMAT = 'jsonlines'
-# FEED_EXPORT_ENCODING = 'UTF-8'
-# FEED_OVERWRITE = 'True'
 
-
-
-MONGODB_SERVER = "localhost"
+MONGODB_SERVER = "mongodb"
 MONGODB_PORT = 27017
 MONGODB_DB = "portalTransparencia"
 MONGODB_COLLECTION = "Nfe"
@@ -83,8 +70,8 @@ ROBOTSTXT_OBEY = True
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
-    # 'cgu_nfe.pipelines.DeleteOutputPipeline': 1200,
-    'cgu_nfe.pipelines.CguNfePipeline': 300,
+    'cgu_nfe.pipelines.CguNfePipeline': 1200,
+    'cgu_nfe.pipelines.CguNfeMetadataPipeline': 300
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)

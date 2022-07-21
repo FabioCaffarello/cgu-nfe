@@ -7,12 +7,14 @@ def reference_html(file_name):
         raw_file = file.read()
     return raw_file
 
+
 def test_shoul_parse_soup():
     reference = reference_html("_on_processing_nfe_request.html")
     soup = parser.parse_nfe_details_data(reference)
     fields = parser.get_nfe_fields(soup)
-    # print(fields)
+    print(fields)
     assert 2 == 2
+
 
 def test_shoul_get_filter_id():
     reference = reference_html("_on_processing_nfe_request.html")
