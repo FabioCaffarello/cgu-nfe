@@ -12,7 +12,7 @@ services:
 
   # proxy:
   #   container_name: proxy
-  #   build: ./docker/proxy
+  #   build: ./proxy
   #   ports:
   #     - 8000:8000
   #   depends_on:
