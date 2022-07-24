@@ -1,5 +1,5 @@
 HOST = "https://portaltransparencia.gov.br/notas-fiscais/"
-PARAMS = "consulta/resultado?paginacaoSimples=true&tamanhoPagina=2&offset="
+PARAMS = "consulta/resultado?paginacaoSimples=true&tamanhoPagina=100&offset="
 QUERY = "&direcaoOrdenacao=asc&colunaOrdenacao=municipioFornecedor&de="
 FILTER = "&ate="
 META = "&colunasSelecionadas=linkDetalhamento%2CorgaoSuperiorDestinatario%2CorgaoDestinatario%2CnomeFornecedor%2CcnpjFornecedor%2CmunicipioFornecedor%2CufFornecedor%2CchaveNotaFiscal%2CvalorNotaFiscal%2CdataEmissao%2CtipoEventoMaisRecente%2Cnumero%2Cserie&_=1657650093440"

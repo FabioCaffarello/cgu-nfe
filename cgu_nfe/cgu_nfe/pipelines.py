@@ -8,7 +8,8 @@ from itemadapter import ItemAdapter
 
 from . import metadata, settings
 
-dotenv_path = os.path.realpath(os.path.join(os.path.dirname(__file__), "..", ".env"))
+
+dotenv_path = os.path.realpath(os.path.join(os.path.dirname(__file__), "../..", ".env"))
 
 load_dotenv(dotenv_path)
 

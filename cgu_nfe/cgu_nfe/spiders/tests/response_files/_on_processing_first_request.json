@@ -1,0 +1,42 @@
+{
+    "draw": 0,
+    "recordsTotal": 9223372036854775807,
+    "recordsFiltered": 9223372036854775807,
+    "data": [
+        {
+            "id": 103401405,
+            "orgaoSuperiorDestinatario": "Minist\u00e9rio da Cidadania",
+            "orgaoDestinatario": "Minist\u00e9rio da Cidadania - Unidades com v\u00ednculo direto",
+            "cnpjOrgaoDestinatario": null,
+            "nomeFornecedor": "EVA ARAUJO DE SOUSA",
+            "cnpjFornecedor": "***.814.603-**",
+            "municipioFornecedor": "ACAILANDIA",
+            "ufFornecedor": "MA",
+            "chaveNotaFiscal": "21220603526252000147558902231578881639982482",
+            "valorNotaFiscal": "446,91",
+            "dataEmissao": "23/06/2022",
+            "tipoEventoMaisRecente": "Autoriza\u00e7\u00e3o de Uso",
+            "dataTipoEventoMaisRecente": null,
+            "numero": 223157888,
+            "serie": 890
+        },
+        {
+            "id": 109801334,
+            "orgaoSuperiorDestinatario": "Minist\u00e9rio da Cidadania",
+            "orgaoDestinatario": "Minist\u00e9rio da Cidadania - Unidades com v\u00ednculo direto",
+            "cnpjOrgaoDestinatario": null,
+            "nomeFornecedor": "FRANCIVALDO DA SILVA SANTOS",
+            "cnpjFornecedor": "***.446.593-**",
+            "municipioFornecedor": "ACAILANDIA",
+            "ufFornecedor": "MA",
+            "chaveNotaFiscal": "21220603526252000147558902231579671025500272",
+            "valorNotaFiscal": "689,60",
+            "dataEmissao": "23/06/2022",
+            "tipoEventoMaisRecente": "Autoriza\u00e7\u00e3o de Uso",
+            "dataTipoEventoMaisRecente": null,
+            "numero": 223157967,
+            "serie": 890
+        }
+    ],
+    "error": null
+}

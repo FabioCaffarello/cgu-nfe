@@ -9,6 +9,14 @@ show_missing = true
 
 [tool.pytest.ini_options]
 addopts = "--cov --cov-report html:'./cgu_nfe/cgu_nfe/spiders/tests/reports/cov/html' --cov-report xml:'./cgu_nfe/cgu_nfe/spiders/tests/reports/cov/coverage.xml' --junitxml='./cgu_nfe/cgu_nfe/spiders/tests/reports/unittest/junit.xml' --html='./cgu_nfe/cgu_nfe/spiders/tests/reports/unittest/html/index.html'"
+log_cli = true
+log_cli_level = "CRITICAL"
+log_cli_format = "%(message)s"
+
+log_file = "./cgu_nfe/cgu_nfe/spiders/tests/debug/pytest.log"
+log_file_level = "INFO"
+log_file_format = "%(asctime)s [%(levelname)s] \n%(message)s \n(%(filename)s:%(lineno)s)"
+log_file_date_format = "%Y-%m-%d %H:%M:%S"
 
 
 [tool.poetry]

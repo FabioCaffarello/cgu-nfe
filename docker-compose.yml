@@ -1,26 +1,26 @@
 version: "3"
 
 services:
-  redis:
-    container_name: redis
-    image: redis/redis-stack-server:latest
-    restart: always
-    ports:
-      - 6379:6379
-    networks:
-      - dataplatform-network
+  # redis:
+  #   container_name: redis
+  #   image: redis/redis-stack-server:latest
+  #   restart: always
+  #   ports:
+  #     - 6379:6379
+  #   networks:
+  #     - dataplatform-network
 
-  proxy:
-    container_name: proxy
-    build: ./docker/proxy
-    ports:
-      - 8000:8000
-    depends_on:
-      - redis
-    links:
-      - redis
-    networks:
-      - dataplatform-network
+  # proxy:
+  #   container_name: proxy
+  #   build: ./docker/proxy
+  #   ports:
+  #     - 8000:8000
+  #   depends_on:
+  #     - redis
+  #   links:
+  #     - redis
+  #   networks:
+  #     - dataplatform-network
 
   mongodb:
     container_name: mongodb
@@ -41,15 +41,15 @@ services:
       - 8888:8888
     depends_on:
       - mongodb
-      - redis
-      - proxy
+      # - redis
+      # - proxy
     links:
       - mongodb
-      - redis
+      # - redis
     volumes:
-    - ./cgu_nfe/cgu_nfe/spiders/tests/debug:/home/bot/cgu_nfe/spiders/tests/debug
-    - ./cgu_nfe/cgu_nfe/spiders/tests/response_files:/home/bot/cgu_nfe/spiders/tests/response_files
-    - ./cgu_nfe/cgu_nfe/spiders/tests/reports:/home/bot/cgu_nfe/spiders/tests/reports
+    - ./cgu_nfe/cgu_nfe/spiders/tests/debug:/home/bot/cgu_nfe/cgu_nfe/spiders/tests/debug
+    - ./cgu_nfe/cgu_nfe/spiders/tests/response_files:/home/bot/cgu_nfe/cgu_nfe/spiders/tests/response_files
+    - ./cgu_nfe/cgu_nfe/spiders/tests/reports:/home/bot/cgu_nfe/cgu_nfe/spiders/tests/reports
 
     networks:
       - dataplatform-network
