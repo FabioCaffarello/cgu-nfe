@@ -34,7 +34,7 @@ class CguNfeSpider(scrapy.Spider):
         url = self.url_request.generate_url_index_request(self._offset)
         yield scrapy.Request(
             url,
-            callback=self.parse,
+            callback=self._on_processing_first_request,
             errback=self._on_error,
             meta={
                 "proxy": self._proxy
@@ -42,15 +42,15 @@ class CguNfeSpider(scrapy.Spider):
             dont_filter=True
         )
 
-    def parse(self, response):
+    def _on_processing_first_request(self, response):
         _response = response.json()
-        self.debug_response("parse.json", json.dumps(_response, indent=4).encode("utf-8"))
+        self.debug_response("_on_processing_first_request.json", json.dumps(_response, indent=4).encode("utf-8"))
         array_data = _response.get('data', None)
 
-        # if array_data is None or array_data == []:
-        #     _has_next = False
+        if array_data is None or array_data == []:
+            _has_next = False
 
-        if self._offset < 3:  # _has_next:
+        if self._offset < _has_next:
             self._offset += 1
             for _data in array_data:
                 nfe_id = _data.get('chaveNotaFiscal', None)
@@ -71,7 +71,7 @@ class CguNfeSpider(scrapy.Spider):
                 )
             yield response.follow(
                 self.url_request.generate_url_index_request(self._offset),
-                callback=self.parse,
+                callback=self._on_processing_first_request,
                 errback=self._on_error,
                 meta={
                     "proxy": self._proxy
